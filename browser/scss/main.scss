@@ -2,13 +2,15 @@
 	box-sizing: border-box;
 }
 
-
+h1, h2, h3, p, a, li {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
 
 $mainColor: #37BEFF;
 
 h2 {
 	color: $mainColor;
-	font-family: sans-serif;
 }
 
 body {
@@ -26,19 +28,26 @@ body {
 
 	#main-logo {
 		float: left;
+		font-size: 30px;
+
 	}
 
-	#links li {
+	#links a {
 		display: inline-block;
 	}
 
 	#links {
 		float: right;
 	}
-	#main-logo, #links li {
+	#main-logo, #links a {
 		padding: 10px 20px;
 		border-radius: 10px;
 		background-color: black;
+		transition: background-color 0.25s ease-in-out;
+
+		&:hover {
+			background-color: lightgray;
+		}
 	}
 	a {
 		color: white;
