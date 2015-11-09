@@ -1,5 +1,4 @@
 window.app = angular.module('portfolio', ['ui.router']);
-console.log('YOOO');
 
 app.config(function ($urlRouterProvider, $locationProvider, $urlMatcherFactoryProvider) {
 

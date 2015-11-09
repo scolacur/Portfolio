@@ -17,26 +17,15 @@
 	<body ng-app="portfolio">
 		<div id="wrapper">
 			<header id="main-header" class="group">
-				<a href="#" id="main-logo">Steve Colacurcio {{2 + 3}}</a>
+				<a ui-sref="home" id="main-logo">Steve Colacurcio {{2+3}}</a>
 				<div id="links">
 					<a href="#">About</a>
 					<a href="#">Projects</a>
 					<a href="#">Contact</a>
 				</div>
 			</header>
-			<div class="primary-content col">
-				<i class="fa fa-anchor"></i>
-				<h2>Primary Content</h2>
-				<p>stuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuff</p>
-			</div>
-			<div class="secondary-content col">
-				<h2>Secondary Content</h2>
-				<p>stuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuff</p>
-
-			</div>
-
-		</div>
-
+		<div id="main" ui-view></div>
 		<footer class="footer"></footer>
+		</div>
 	</body>
 </html>
