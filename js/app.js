@@ -9,5 +9,5 @@ app.get('/', function(req,res){
 var server  = app.listen(2000, function(){
 	var host = server.address().address;
 	var port = server.address().port;
-	console.log('Example app listening at http://%s:%s', host, port);
+	console.log('Steve\'s Portfolio App listening at http://%s:%s', host, port);
 });
