@@ -9,7 +9,17 @@ var gulp = require('gulp'),
 	runSeq = require('run-sequence'),
 	concat = require('gulp-concat'),
 	babel = require('gulp-babel'),
-	autoprefixer = require('gulp-autoprefixer');
+	autoprefixer = require('gulp-autoprefixer'),
+	notify = require('gulp-notify');
+
+// function errorLog(error){
+// 	// notify('Gulp Error');
+// 	notify.onError(function(e){
+// 		console.log(e);
+// 	});
+// 	console.error.bind(error);
+// 	this.emit('end');
+// }
 
 /*Live reload task*/
 gulp.task('reload', function () {
@@ -22,7 +32,11 @@ gulp.task('reloadCSS', function () {
 
 gulp.task('buildCSS', function () {
 	return gulp.src('./browser/scss/**/*.scss')
-		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+		.pipe(plumber({
+			errorHandler: notify.onError('SASS processing failed! Check your gulp process.')
+		}))
+		.pipe(sass({outputStyle: 'compressed'})
+		.on('error', sass.logError))
 		.pipe(autoprefixer('last 2 version'))
 		.pipe(rename('style.css'))
 		.pipe(gulp.dest('./public'));
@@ -30,7 +44,6 @@ gulp.task('buildCSS', function () {
 
 gulp.task('buildJS', ['lintJS'], function () {
 	return gulp.src(['./browser/js/app.js', './browser/js/**/*.js'])
-		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(concat('main.js'))
 		.pipe(babel({presets: ['es2015']}))
@@ -40,6 +53,9 @@ gulp.task('buildJS', ['lintJS'], function () {
 
 gulp.task('lintJS', function () {
 	return gulp.src(['./browser/js/**/*.js', './server/**/*.js'])
+		.pipe(plumber({
+			errorHandler: notify.onError("Linting Failed. Check your Gulp process.")
+		}))
 		.pipe(eslint())
 		.pipe(eslint.format())
 		.pipe(eslint.failOnError());
