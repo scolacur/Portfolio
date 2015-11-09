@@ -21,6 +21,7 @@
     "angular": "^1.4.7",
     "angular-ui-router": "^0.2.15",
     "express": "^4.13.3",
+    "gulp-autoprefixer": "^3.1.0",
     "normalize.css": "^3.0.3"
   },
   "devDependencies": {

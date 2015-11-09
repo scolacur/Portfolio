@@ -16,17 +16,18 @@ h1, h2, h3, p, a, li, footer {
 	font-weight: 300;
 }
 
-
+/*Page Styles
+========================*/
 
 body {
-	// background-color: lightgray;
 	background-image: url('bgnoise.jpg');
 	margin: 0px;
 }
 
 footer {
 	text-align: center;
-	a{
+	font-size: 18px;
+	a {
 		text-decoration: none;
 	}
 }

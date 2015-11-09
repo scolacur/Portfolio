@@ -1,1 +1,101 @@
-*{-moz-box-sizing:border-box;box-sizing:border-box}h1,h2,h3,p,a,li,footer{font-family:'Oxygen', sans-serif;font-weight:300}body{background-image:url("bgnoise.jpg");margin:0px}footer{text-align:center}footer a{text-decoration:none}#wrapper{margin:auto}#main-header{padding:20px;background-color:#37BEFF;opacity:.5}#main-header #main-logo{float:left;font-size:30px}#main-header #links{float:right}#main-header #links a{display:inline-block}#main-header #main-logo,#main-header #links a{padding:10px 20px;border-radius:10px;background-color:black;transition:background-color 0.25s ease-in-out;text-align:center}#main-header #main-logo:hover,#main-header #links a:hover{background-color:lightgray}#main-header a{color:lightgray;text-decoration:none}.col{padding:20px}.group::after{content:"";display:table;clear:both}@media (max-width: 768px){#links a{width:100%;margin-top:5px;float:none}#links,#main-logo{width:90%;height:initial;float:none !important;margin:auto}#main-logo{display:block}}
+/*Page Styles
+========================*/
+* {
+  box-sizing: border-box;
+}
+
+/*Colors
+========================*/
+/*Fonts
+========================*/
+h1, h2, h3, p, a, li, footer {
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 300;
+}
+
+/*Page Styles
+========================*/
+body {
+  background-image: url("bgnoise.jpg");
+  margin: 0px;
+}
+
+footer {
+  text-align: center;
+  font-size: 18px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+#wrapper {
+  margin: auto;
+}
+
+#main-header {
+  padding: 20px;
+  background-color: #37BEFF;
+  opacity: .5;
+}
+
+#main-header #main-logo {
+  float: left;
+  font-size: 30px;
+}
+
+#main-header #links {
+  float: right;
+}
+
+#main-header #links a {
+  display: inline-block;
+}
+
+#main-header #main-logo, #main-header #links a {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: black;
+  transition: background-color 0.25s ease-in-out;
+  text-align: center;
+}
+
+#main-header #main-logo:hover, #main-header #links a:hover {
+  background-color: lightgray;
+}
+
+#main-header a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+.col {
+  padding: 20px;
+}
+
+/*Clearfix
+===========================*/
+.group::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*Media Queries
+=============================*/
+@media (max-width: 768px) {
+  #links a {
+    width: 100%;
+    margin-top: 5px;
+    float: none;
+  }
+  #links, #main-logo {
+    width: 90%;
+    height: initial;
+    float: none !important;
+    margin: auto;
+  }
+  #main-logo {
+    display: block;
+  }
+}
