@@ -43,11 +43,11 @@ gulp.task('lintJS', function () {
 });
 
 /* Scripts task: Uglifies, */
-gulp.task('uglify', function(){
-	gulp.src('browser/js/*.js')
-	.pipe(uglify())
-	.pipe(gulp.dest('build/js'));
-});
+// gulp.task('uglify', function(){
+// 	gulp.src('browser/js/*.js')
+// 	.pipe(uglify())
+// 	.pipe(gulp.dest('build/js'));
+// });
 
 gulp.task('build', function () {
 	runSeq(['buildJS', 'buildCSS']);
@@ -66,7 +66,7 @@ gulp.task('default', function(){
 		 runSeq('buildCSS', 'reloadCSS');
 	});
 
-	gulp.watch('server/**/*.js', ['uglify','lintJS']);
+	gulp.watch('server/**/*.js', ['lintJS']);
 
 	// Reload when a template (.html) file changes.
 	gulp.watch(['browser/**/*.html', 'server/app/views/*.html'], ['reload']);

@@ -1,20 +1,17 @@
+$mainColor: #37BEFF;
+
 * {
 	box-sizing: border-box;
 }
 
 h1, h2, h3, p, a, li {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Oxygen', sans-serif;
 	font-weight: 300;
 }
 
-$mainColor: #37BEFF;
-
-h2 {
-	color: $mainColor;
-}
-
 body {
-	background-color: lightgray;
+	// background-color: lightgray;
+	background-image: url('bgnoise.jpg');
 	margin: 0px;
 }
 
@@ -25,6 +22,7 @@ body {
 #main-header {
 	padding: 20px;
 	background-color: $mainColor;
+	opacity: .5;
 
 	#main-logo {
 		float: left;
@@ -32,13 +30,14 @@ body {
 
 	}
 
-	#links a {
-		display: inline-block;
-	}
-
 	#links {
 		float: right;
+		a {
+			display: inline-block;
+
+		}
 	}
+
 	#main-logo, #links a {
 		padding: 10px 20px;
 		border-radius: 10px;
@@ -50,9 +49,13 @@ body {
 		}
 	}
 	a {
-		color: white;
+		color: lightgray;
 		text-decoration: none;
 	}
+}
+
+.col {
+	padding: 20px;
 }
 
 /*Clearfix

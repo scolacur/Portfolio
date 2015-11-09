@@ -5,25 +5,31 @@
 		<meta charset="utf-8">
 		<title>Steve Colacurcio</title>
 		<link rel="stylesheet" type="text/css" href="/normalize.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="/style.css">
 		<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+		<script src="/angular/angular.js"></script>
+		<script src="/angular-ui-router/release/angular-ui-router.js"></script>
+		<script src="/main.js"></script>
 	</head>
 
-	<body>
+	<body ng-app="portfolio">
 		<div id="wrapper">
 			<header id="main-header" class="group">
-				<a href="#" id="main-logo">Steve Colacurcio</a>
+				<a href="#" id="main-logo">Steve Colacurcio {{2 + 3}}</a>
 				<div id="links">
 					<a href="#">About</a>
 					<a href="#">Projects</a>
 					<a href="#">Contact</a>
 				</div>
 			</header>
-			<div class-"primary-content">
+			<div class="primary-content col">
+				<i class="fa fa-anchor"></i>
 				<h2>Primary Content</h2>
 				<p>stuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuff</p>
 			</div>
-			<div class-"secondary-content">
+			<div class="secondary-content col">
 				<h2>Secondary Content</h2>
 				<p>stuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuffstuff</p>
 

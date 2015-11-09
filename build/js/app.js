@@ -1,1 +1,0 @@
-var express=require("express"),app=express();app.get("/",function(e,s){s.send("Yoooo")});var server=app.listen(2e3,function(){var e=server.address().address,s=server.address().port;console.log("Steve's Portfolio App listening at http://%s:%s",e,s)});
