@@ -18,15 +18,29 @@ h1, h2, h3, p, a, li, footer {
 
 /*Page Styles
 ========================*/
+html,
+body {
+	padding:0;
+	height:100%;
+	margin: 0;
+}
 
 body {
 	background-image: url('bgnoise.jpg');
-	margin: 0px;
 }
 
 footer {
 	text-align: center;
 	font-size: 18px;
+	width:100%;
+	background-color: $mainColor;
+	opacity: .5;
+	height:50px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	padding-top: 12px;
+
 	a {
 		text-decoration: none;
 	}
@@ -34,10 +48,17 @@ footer {
 
 #wrapper {
 	margin: auto;
+	min-height:100%;
+	// position:relative;
+}
+
+
+#main {
+	padding-bottom:50px; /* Must be >= height of the footer */
 }
 
 #main-header {
-	padding: 20px;
+	padding: 10px;
 	background-color: $mainColor;
 	opacity: .5;
 
