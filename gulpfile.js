@@ -7,7 +7,8 @@ var gulp = require('gulp'),
 	 plumber = require('gulp-plumber'),
 	 sourcemaps = require('gulp-sourcemaps'),
 	 runSeq = require('run-sequence'),
-	 concat = require('gulp-concat');
+	 concat = require('gulp-concat'),
+	 babel = require('gulp-babel');
 
 /*Live reload task*/
 gulp.task('reload', function () {
@@ -30,7 +31,7 @@ gulp.task('buildJS', ['lintJS'], function () {
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(concat('main.js'))
-      //   .pipe(babel())
+        .pipe(babel({presets: ['es2015']}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./public'));
 });
@@ -59,11 +60,11 @@ gulp.task('default', function(){
 	gulp.start('build');
 
 	gulp.watch('browser/js/**', function () {
-	 runSeq('buildJS', 'reload');
+		runSeq('buildJS', 'reload');
 	});
 
 	gulp.watch('browser/scss/**', function () {
-		 runSeq('buildCSS', 'reloadCSS');
+		runSeq('buildCSS', 'reloadCSS');
 	});
 
 	gulp.watch('server/**/*.js', ['lintJS']);
