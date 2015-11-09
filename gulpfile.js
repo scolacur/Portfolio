@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 
 /* Scripts task: Uglifies, */
 gulp.task('scripts', function(){
-	gulp.src('js/*.js')
+	gulp.src('browser/js/*.js')
 	.pipe(uglify())
 	.pipe(gulp.dest('build/js'));
 });
@@ -14,20 +14,20 @@ gulp.task('scripts', function(){
 
 //Styles task
 gulp.task('styles', function(){
-	gulp.src('scss/**/*.scss') //finds all nested children
+	gulp.src('browser/scss/**/*.scss') //finds all nested children
 	.pipe(sass({
 		outputStyle: 'compressed',
 		errLogToConsole: true
 	}))
 	.pipe(rename('style.css'))
-	.pipe(gulp.dest('/public'));
+	.pipe(gulp.dest('public'));
 });
 
 
 /*Watch Task: Watches JS*/
 gulp.task('watch', function(){
-	gulp.watch('js/*.js', ['scripts']);
-	gulp.watch('scss/**/*.scss', ['styles']);
+	gulp.watch('browser/js/*.js', ['scripts']);
+	gulp.watch('browser/scss/**/*.scss', ['styles']);
 });
 
 
