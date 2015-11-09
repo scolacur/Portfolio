@@ -1,13 +1,27 @@
-//Main Application
-var express = require('express');
-var app = express();
+var chalk = require('chalk');
 
-app.get('/', function(req,res){
-	res.send('Yoooo');
-});
+// Create a node server instance
+var server = require('http').createServer();
 
-var server  = app.listen(2000, function(){
-	var host = server.address().address;
-	var port = server.address().port;
-	console.log('Steve\'s Portfolio App listening at http://%s:%s', host, port);
-});
+var createApplication = function () {
+    var app = require('./app');
+    server.on('request', app); // Attach the Express application.
+};
+
+var startServer = function () {
+
+    var PORT = process.env.PORT || 2000;
+
+    server.listen(PORT, function () {
+        console.log(chalk.blue('Server started on port', chalk.magenta(PORT)));
+    });
+
+};
+
+createApplication();
+
+startServer();
+// .catch(function (err) {
+//     console.error(chalk.red(err.stack));
+//     process.kill(1);
+// });

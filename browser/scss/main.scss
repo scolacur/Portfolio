@@ -2,7 +2,9 @@
 	box-sizing: border-box;
 }
 
+$mainColor: #37BEFF;
+
 h2 {
-	color: green;
+	color: $mainColor; 
 	font-family: sans-serif;
 }
