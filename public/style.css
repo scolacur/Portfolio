@@ -1,1 +1,1 @@
-*{box-sizing:border-box}h2{color:#37BEFF;font-family:sans-serif}
+*{box-sizing:border-box}h2{color:#37BEFF;font-family:sans-serif}body{background-color:lightgray;margin:0px}#wrapper{margin:auto}#main-header{padding:20px;background-color:#37BEFF}#main-header #main-logo{float:left}#main-header #links li{display:inline-block}#main-header #links{float:right}#main-header #main-logo,#main-header #links li{padding:10px 20px;border-radius:10px;background-color:black}#main-header a{color:white;text-decoration:none}.group::after{content:"";display:table;clear:both}

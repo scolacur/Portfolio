@@ -2,9 +2,54 @@
 	box-sizing: border-box;
 }
 
+
+
 $mainColor: #37BEFF;
 
 h2 {
-	color: $mainColor; 
+	color: $mainColor;
 	font-family: sans-serif;
+}
+
+body {
+	background-color: lightgray;
+	margin: 0px;
+}
+
+#wrapper {
+	margin: auto;
+}
+
+#main-header {
+	padding: 20px;
+	background-color: $mainColor;
+
+	#main-logo {
+		float: left;
+	}
+
+	#links li {
+		display: inline-block;
+	}
+
+	#links {
+		float: right;
+	}
+	#main-logo, #links li {
+		padding: 10px 20px;
+		border-radius: 10px;
+		background-color: black;
+	}
+	a {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+/*Clearfix
+===========================*/
+.group::after{
+	content: "";
+	display: table;
+	clear: both;
 }
