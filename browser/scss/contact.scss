@@ -170,6 +170,15 @@ a {
 		}
 	}
 }
+
+/*Media Queries
+=============================*/
+@media (max-width: 1024px){
+	#contact {
+		width: 100%;
+	}
+}
+
 // .parallelogram {
 // 	position: relative;
 // 	z-index: -1;

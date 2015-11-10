@@ -60,27 +60,32 @@ footer {
 }
 
 #main-header {
-	padding: 10px 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 	background-color: $aqua;
 	opacity: .5;
 
 	#main-logo {
 		float: left;
 		font-size: 30px;
+		min-height: 60px;
 	}
 
 	#links {
 		float: right;
+		min-height: 60px;
+
 		a {
 			display: inline-block;
-			margin-top: 8px;
+			height: 60px;
+			color: black;
+			text-decoration: none;
 		}
 	}
 
 	#main-logo, #links a {
-		padding: 10px 20px;
-		border-radius: 10px;
-		// background-color: black;
+		padding-left: 20px;
+		padding-right: 20px;
 		transition: all 0.25s ease-in-out;
 		text-align: center;
 		&:hover {
@@ -88,9 +93,13 @@ footer {
 			color: darken(white, 20%);
 		}
 	}
-	a {
-		color: black;
-		text-decoration: none;
+
+	#links a {
+		padding-top: 20px;
+	}
+	#main-logo {
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 }
 
@@ -112,10 +121,10 @@ footer {
 	#links a {
 		width: 100%;
 		margin-top: 5px;
-		float: none;
+		float: none !important;
 	}
 	#links, #main-logo {
-		width: 90%;
+		width: 100%;
 		height: initial;
 		float: none !important;
 		margin: auto;
