@@ -32,6 +32,6 @@ var sendEmail = function sendEmail(data) {
 
 router.post('/', function(req,res,next){
 	var success = false;
-	// sendEmail(req.body);
+	sendEmail(req.body);
 	res.status(200).json(success);
 });
