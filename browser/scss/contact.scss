@@ -70,8 +70,9 @@ a {
 		}
 
 		input, textarea {
-			padding-left: 45px;
+			padding-left: 50px;
 			font-size: 14px;
+			background-color: #fbfbfb;
 			&:focus {
 				outline: none;
 				border: solid 2px dimgray;
@@ -81,6 +82,7 @@ a {
 			margin-bottom: 15px;
 			height: 50px;
 			width: 100%;
+
 		}
 
 		textarea {
