@@ -1,1 +1,33 @@
-<p>contact info</p>
+<div id="contact">
+	<h1>Contact</h1>
+	<h2>Resume</h2>
+
+	<div id="form-container">
+		<h2>Say Hi!</h2>
+		<form name="contactForm" ng-submit="contactForm.$valid && sendMail(data)">
+
+			<!-- <p ng-show="contactForm.nameField.$error.required">Name is a required field</p> -->
+			<h3>Name</h3>
+			<input name="nameField" type="text" ng-model="data.name" required/>
+
+			<!-- <p ng-show="contactForm.emailField.$error.required">Email is a required field</p> -->
+			<h3>Email</h3>
+			<input name="emailField" type="email" ng-model="data.email" required/>
+
+			<!-- <p ng-show="contactForm.messageField.$error.required">Message is a required field</p> -->
+			<h3>Message</h3>
+			<textarea name="messageField" type="text" ng-model="data.message" required/></textarea>
+			<div class="button-holder">
+				<button type="submit"/>Send</button>
+			</div>
+		</form>
+	</div>
+	<div id="thank-you" ng-show="sent">
+		<p ng-if="success">Thanks for reaching out! I'll get back to you as soon as possible.</p>
+		<p ng-if="!success">Oops! Looks like there was an error with the Mandrill API. <br>
+			But that's ok, you can reach me directly here:
+			<a href="mailto:stephencolacurcio@gmail.com" target="_top">stephencolacurcio@gmail.com</a>
+		</p>
+
+	</div>
+</div>

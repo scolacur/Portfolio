@@ -14,6 +14,7 @@ app.config(function($stateProvider){
 	})
 	.state('contact', {
 		url: '/contact',
-		templateUrl: '/js/templates/contact.html'
+		templateUrl: '/js/templates/contact.html',
+		controller: 'contactCtrl'
 	});
 });

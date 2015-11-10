@@ -18,7 +18,7 @@
 	<body ng-app="portfolio">
 		<div id="wrapper">
 			<header id="main-header" class="group">
-				<a ui-sref="home" id="main-logo">Steve Colacurcio {{2+3}}</a>
+				<a ui-sref="home" id="main-logo">Steve Colacurcio</a>
 				<div id="links">
 					<a ui-sref="about">About</a>
 					<a ui-sref="projects">Projects</a>
@@ -27,10 +27,12 @@
 			</header>
 			<div id="main" ui-view></div>
 			<footer class="footer">
-				Copyright 2015 Stephen Colacurcio |
+				<i class="fa fa-copyright"></i>
+				2015 |
 				<a href="http://www.github.com/scolacur/portfolio">
-					View source code on 
+					View on
 					<i class="fa fa-github"></i>
+
 				</a>
 			</footer>
 		</div>

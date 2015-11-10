@@ -7,7 +7,8 @@
 
 /*Colors
 ========================*/
-$mainColor: #37BEFF;
+$lightBlue: #37BEFF;
+$aqua: #7FFFD4;
 
 /*Fonts
 ========================*/
@@ -31,15 +32,15 @@ body {
 
 footer {
 	text-align: center;
-	font-size: 18px;
+	font-size: 16px;
 	width:100%;
-	background-color: $mainColor;
+	background-color: $aqua;
 	opacity: .5;
-	height:50px;
+	height:40px;
 	position:absolute;
 	bottom:0;
 	left:0;
-	padding-top: 12px;
+	padding-top: 10px;
 
 	a {
 		text-decoration: none;
@@ -54,40 +55,41 @@ footer {
 
 
 #main {
-	padding-bottom:50px; /* Must be >= height of the footer */
+	padding: 20px 20px 40px 20px;
+	/* Bottom Padding must be >= height of the footer */
 }
 
 #main-header {
-	padding: 10px;
-	background-color: $mainColor;
+	padding: 10px 20px;
+	background-color: $aqua;
 	opacity: .5;
 
 	#main-logo {
 		float: left;
 		font-size: 30px;
-
 	}
 
 	#links {
 		float: right;
 		a {
 			display: inline-block;
-
+			margin-top: 8px;
 		}
 	}
 
 	#main-logo, #links a {
 		padding: 10px 20px;
 		border-radius: 10px;
-		background-color: black;
-		transition: background-color 0.25s ease-in-out;
+		// background-color: black;
+		transition: all 0.25s ease-in-out;
 		text-align: center;
 		&:hover {
-			background-color: lightgray;
+			background-color: darken(gray, 20%);
+			color: darken(white, 20%);
 		}
 	}
 	a {
-		color: lightgray;
+		color: black;
 		text-decoration: none;
 	}
 }
@@ -122,3 +124,5 @@ footer {
 		display: block;
 	}
 }
+
+@import 'contact'
