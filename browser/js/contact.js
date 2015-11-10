@@ -1,15 +1,16 @@
 app.controller('contactCtrl', function($scope, $http){
-	$scope.data = {};
+	$scope.formData = {};
 
 	$scope.sendMail = function(){
 		$scope.sent = false;
 		$scope.success = false;
-
-		$http.post('/api/contact', $scope.data)
+		console.log('sending mail');
+		$http.post('/api/contact', $scope.formData)
 		.then(function(successResponse){
+			console.log("response: ",successResponse);
 			$scope.sent = true;
 			$scope.success = successResponse.data;
-			$scope.data = {};
+			$scope.formData = {};
 		});
 	};
 });

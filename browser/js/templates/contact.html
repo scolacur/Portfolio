@@ -29,10 +29,10 @@
 			</div>
 		</form>
 	</div>
-	<div id="thank-you" ng-show="sent">
+	<div id="thank-you" ng-show="!sent">
 		<p ng-if="success">Thanks for reaching out! I'll get back to you as soon as possible.</p>
-		<p ng-if="!success">Oops! Looks like there was an error with the Mandrill API. <br>
-			But that's ok, you can reach me directly here:
+		<p ng-if="!success">Oops! Looks like there was a problem with the Mandrill API. <br>
+			Feel free to email me directly at
 			<a href="mailto:stephencolacurcio@gmail.com" target="_top">stephencolacurcio@gmail.com</a>
 		</p>
 	</div>

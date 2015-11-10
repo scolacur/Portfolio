@@ -1,10 +1,11 @@
 var router = require('express').Router();
 var mandrill = require('mandrill-api/mandrill');
 var mandrillClient = new mandrill.Mandrill('TczSuCWNxN6aaG4g-rv0Rw');
+// var success;
 
 module.exports = router;
 
-var sendEmail = function sendEmail(data) {
+var createMessage = function createMessage(data) {
   var message = {
 	  "html": data.message,
       "subject": data.name + " saw your portfolio and sent you a message!",
@@ -20,18 +21,22 @@ var sendEmail = function sendEmail(data) {
       "preserve_recipients": true,
       "merge": false
   };
+  return message;
 
-  var async = false;
-  var ip_pool = "Main Pool";
-  mandrillClient.messages.send({"message": message, "async": async, "ip_pool": ip_pool}, function() {
-	  success = true;
-  }, function(e) {
-      console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
-  });
 };
 
 router.post('/', function(req,res,next){
-	var success = false;
-	sendEmail(req.body);
-	res.status(200).json(success);
+	// success = false;
+
+	var message = createMessage(req.body);
+	var async = false;
+	var ip_pool = "Main Pool";
+	mandrillClient.messages.send({"message": message, "async": async, "ip_pool": ip_pool}, function() {
+		res.status(200).json(true);
+	}, function(e) {
+		console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
+		res.status(200).json(false);
+	});
+
+
 });
