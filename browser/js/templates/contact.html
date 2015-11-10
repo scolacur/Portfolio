@@ -1,24 +1,31 @@
 <div id="contact">
 	<h1>Contact</h1>
-	<h2>Resume</h2>
+	<div class="social">
+		<a href="https://plus.google.com/+StephenColacurcio/posts">
+			<i id="google" class="fa fa-google-plus"></i>
+		</a>
+		<a href="https://linkedin.com/in/scolacurcio">
+			<i id="linkedin" class="fa fa-linkedin"></i>
+		</a>
+		<a href="https://github.com/scolacur">
+			<i id="github" class="fa fa-github"></i>
+		</a>
+		<a id="resume" target="_blank" href="https://www.dropbox.com/s/wkmhvz0lxgbbkef/Stephen%20Colacurcio%20Resume%2010-15.pdf?dl=0">Resume</a>
+	</div>
+
 
 	<div id="form-container">
 		<h2>Say Hi!</h2>
 		<form name="contactForm" ng-submit="contactForm.$valid && sendMail(data)">
 
-			<!-- <p ng-show="contactForm.nameField.$error.required">Name is a required field</p> -->
-			<h3>Name</h3>
-			<input name="nameField" type="text" ng-model="data.name" required/>
+			<input id="nameField" name="nameField" type="text" ng-model="data.name" placeholder="Name" required/>
 
-			<!-- <p ng-show="contactForm.emailField.$error.required">Email is a required field</p> -->
-			<h3>Email</h3>
-			<input name="emailField" type="email" ng-model="data.email" required/>
+			<input id="emailField" name="emailField" type="email" ng-model="data.email" placeholder="Email" required/>
 
-			<!-- <p ng-show="contactForm.messageField.$error.required">Message is a required field</p> -->
-			<h3>Message</h3>
-			<textarea name="messageField" type="text" ng-model="data.message" required/></textarea>
+			<textarea id="messageField" name="messageField" type="text" ng-model="data.message" placeholder="Message" required/></textarea>
 			<div class="button-holder">
-				<button type="submit"/>Send</button>
+				<button id="slide-button" type="submit"/>Send</button>
+				<div class="ease"></div>
 			</div>
 		</form>
 	</div>
@@ -28,6 +35,5 @@
 			But that's ok, you can reach me directly here:
 			<a href="mailto:stephencolacurcio@gmail.com" target="_top">stephencolacurcio@gmail.com</a>
 		</p>
-
 	</div>
 </div>
