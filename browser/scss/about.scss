@@ -3,19 +3,21 @@
 
 /*Colors
 ========================*/
-$lightBlue: #37BEFF;
 $aqua: #7FFFD4;
 $cyan: #E0FFFF;
 $cream: #F5FFFA;
-$neonBlue: #00E3FF;
-$pastelBlue: #2EFCFF;
-$pastelOrange: #FB985C;
+
+$pastelBlue: #33CCFF;
+$pastelOrange: lightsalmon;
 $pastelPurple: #C688E8;
-$yellow: #FFFF00;
-$pastelYellow: #FFFF65;
 $pastelRed: #FF807D;
 $pastelPink: #FF8EB2;
-$brightBlue: #4DF9FF;
+// $yellow: #FFFF00;
+// $pastelYellow: #FFFF65;
+// $brightBlue: #4DF9FF;
+// $pastelBlue2: #8DE0DE;
+// $neonBlue: #00E3FF;
+// $lightBlue: #37BEFF;
 
 /*Page Styles
 ========================*/
@@ -100,7 +102,7 @@ $brightBlue: #4DF9FF;
 		width: 100%;
 		margin: 0;
 		font-size: 60px;
-		color: dimgray;
+		color: $cream;
 		text-align: center;
 		opacity: .2;
 		webkit-transition: all 1s;
@@ -120,15 +122,16 @@ $brightBlue: #4DF9FF;
 		background-color: $aqua;
 	}
 	#fig-3 {
-		background-color: $pastelRed;
+		background-color: $pastelBlue;
+		// border: solid black 4px;
 	}
 	#fig-4 {
-		background-color: $pastelPurple;
+		background-color: $pastelRed;
 	}
 	#fig-5 {
-		background-color: $pastelOrange;
+		background-color: $pastelPurple;
 	}
 	#fig-6 {
-		background-color: $pastelBlue;
+		background-color: $pastelOrange;
 	}
 }
