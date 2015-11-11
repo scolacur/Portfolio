@@ -334,6 +334,9 @@ to   { opacity: 1; }
 /*Media Queries
 =============================*/
 @media (min-width: 769px) and (max-width: 1024px) {
+	body {
+		overflow: auto;
+	}
 	#main-content {
 		width: 90% !important;
 		.card-top-container {
@@ -353,6 +356,9 @@ to   { opacity: 1; }
 }
 
 @media (max-width: 768px){
+	body {
+		overflow: auto;
+	}
 	#main-content {
 		width: 90% !important;
 		.card-top-container {
