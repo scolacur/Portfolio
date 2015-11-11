@@ -48,5 +48,12 @@ app.controller('projectCtrl', function($scope){
 				navigateDown();
 			}
 		});
+
+		$('#down-arrow').click(function(){
+			console.log('clicked');
+			if (scrolling) return;
+			navigateDown();
+		});
+
 	});
 });

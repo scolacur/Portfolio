@@ -12,9 +12,9 @@ app.controller('aboutCtrl', function($scope){
 
 		prev = current;
 		current = '#fig-' +  + ((increment % 6) + 1);
-		console.log(current);
-		$(current).css({'border-radius' : '30px'});
-		$(prev).css({'border-radius' : '0px'});
+		// console.log(current);
+		// $(current).css({'border-radius' : '30px'});
+		// $(prev).css({'border-radius' : '0px'});
 
 	},1500);
 });
