@@ -7,10 +7,14 @@
 
 /*Colors
 ========================*/
-$lightBlue: #37BEFF;
 $aqua: #7FFFD4;
 $cyan: #E0FFFF;
 $cream: #F5FFFA;
+$pastelBlue: #33CCFF;
+$pastelOrange: lightsalmon;
+$pastelPurple: #C688E8;
+$pastelRed: #FF807D;
+$pastelPink: #FF8EB2;
 
 /*Fonts
 ========================*/
@@ -41,7 +45,8 @@ footer {
 	text-align: center;
 	font-size: 16px;
 	width:100%;
-	background-color: $aqua;
+	// background-color: $aqua;
+	background: linear-gradient(240deg, $aqua 40%, $pastelBlue 150%);
 	// opacity: .5;
 	height:40px;
 	position:fixed;
@@ -71,7 +76,9 @@ footer {
 #main-header {
 	padding-left: 20px;
 	padding-right: 20px;
-	background-color: $aqua;
+	// background-color: $aqua;
+	background: linear-gradient(10deg, $aqua 50%, $pastelBlue 150%);
+
 	// opacity: .5;
 
 	#main-logo {

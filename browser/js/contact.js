@@ -14,4 +14,21 @@ app.controller('contactCtrl', function($scope, $http){
 			$scope.formData = {};
 		});
 	};
+
+	var card = $('#card');
+	var note = $('#note');
+	var toggle = true;
+
+	card.click(function(){
+		if (toggle){
+			card.addClass('slideRight');
+			note.css({'display': 'initial'});
+		} else {
+			card.removeClass('slideRight');
+			note.css({'display': 'none'});
+		}
+		toggle = !toggle;
+
+	});
+
 });

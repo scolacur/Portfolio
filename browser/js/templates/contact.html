@@ -1,45 +1,50 @@
 <div id="contact">
-	<!-- <h1>Contact</h1> -->
-	<div class="social">
-		<a href="https://plus.google.com/+StephenColacurcio/posts">
-			<i id="google" class="fa fa-google-plus"></i>
-		</a>
-		<a href="https://linkedin.com/in/scolacurcio">
-			<i id="linkedin" class="fa fa-linkedin"></i>
-		</a>
-		<a href="https://github.com/scolacur">
-			<i id="github" class="fa fa-github"></i>
-		</a>
-		<a id="resume" target="_blank" href="https://www.dropbox.com/s/wkmhvz0lxgbbkef/Stephen%20Colacurcio%20Resume%2010-15.pdf?dl=0">Résumé</a>
+	<div id="left-col">
+		<!-- <i id="arrow" class="fa fa-arrow-left"></i> -->
+		<p id="note">Holy $#!% a business card!</p>
+		<div class="card-container">
+			<img id="card" src="business-card.png"></img>
+		</div>
 	</div>
+	<div id="main-content">
+		<div class="social">
+			<a href="https://plus.google.com/+StephenColacurcio/posts">
+				<i id="google" class="fa fa-google-plus"></i>
+			</a>
+			<a href="https://linkedin.com/in/scolacurcio">
+				<i id="linkedin" class="fa fa-linkedin"></i>
+			</a>
+			<a href="https://github.com/scolacur">
+				<i id="github" class="fa fa-github"></i>
+			</a>
+			<a id="resume" target="_blank" href="https://www.dropbox.com/s/wkmhvz0lxgbbkef/Stephen%20Colacurcio%20Resume%2010-15.pdf?dl=0">Résumé</a>
+		</div>
 
 
-	<div id="form-container">
-		<h2>Say Hi!</h2>
-		<form name="contactForm" ng-submit="contactForm.$valid && sendMail(data)">
-
-			<input id="nameField" name="nameField" type="text" ng-model="formData.name" placeholder="Name" required/>
-
-			<input id="emailField" name="emailField" type="email" ng-model="formData.email" placeholder="Email" required/>
-
-			<textarea id="messageField" name="messageField" type="text" ng-model="formData.message" placeholder="Message" required/></textarea>
-			<div class="button-holder">
-				<button id="slide-button" type="submit">
-					<p ng-hide="waiting">Send</p>
-					<!-- <div id="waiting" ng-show="waiting">
-						<img src="ring-alt.svg"></img>
-					</div> -->
-				</button>
-				<div class="ease">
+		<div id="form-container">
+			<h2>Say Hi!</h2>
+			<form name="contactForm" ng-submit="contactForm.$valid && sendMail(data)">
+				<input id="nameField" name="nameField" type="text" ng-model="formData.name" placeholder="Name" required/>
+				<input id="emailField" name="emailField" type="email" ng-model="formData.email" placeholder="Email" required/>
+				<textarea id="messageField" name="messageField" type="text" ng-model="formData.message" placeholder="Message" required/></textarea>
+				<div class="button-holder">
+					<button id="slide-button" type="submit">
+						<p ng-hide="waiting">Send</p>
+						<div id="waiting" ng-show="waiting">
+							<img src="ring-alt.svg"></img>
+						</div>
+					</button>
+					<div class="ease">
+					</div>
 				</div>
-			</div>
-		</form>
-	</div>
-	<div id="thank-you" ng-show="sent">
-		<p ng-if="success">Thanks for reaching out! I'll get back to you as soon as possible.</p>
-		<p ng-if="!success">Oops! Looks like there was a problem with the Mandrill API. <br>
-			Feel free to email me directly at
-			<a href="mailto:stephencolacurcio@gmail.com" target="_top">stephencolacurcio@gmail.com</a>
-		</p>
+			</form>
+		</div>
+		<div id="thank-you" ng-show="sent">
+			<p ng-if="success">Thanks for reaching out! I'll get back to you as soon as possible.</p>
+			<p ng-if="!success">Oops! Looks like there was a problem with the Mandrill API. <br>
+				Feel free to email me directly at
+				<a href="mailto:stephencolacurcio@gmail.com" target="_top">stephencolacurcio@gmail.com</a>
+			</p>
+		</div>
 	</div>
 </div>
