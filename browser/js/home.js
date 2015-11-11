@@ -11,7 +11,8 @@ app.config(function($stateProvider){
 	})
 	.state('about', {
 		url: '/about',
-		templateUrl: '/js/templates/about.html'
+		templateUrl: '/js/templates/about.html',
+		controller: 'aboutCtrl'
 	})
 	.state('contact', {
 		url: '/contact',

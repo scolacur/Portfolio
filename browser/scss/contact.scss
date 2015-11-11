@@ -1,12 +1,5 @@
 /*Contact Page
-====================*/
-
-/*Page Styles
 ========================*/
-* {
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
 
 /*Colors
 ========================*/
@@ -15,17 +8,8 @@ $aqua: #7FFFD4;
 $cyan: #E0FFFF;
 $cream: #F5FFFA;
 
-/*Fonts
+/*Page Styles
 ========================*/
-h1, h2, h3, p, a, li, footer, button {
-	font-family: 'Oxygen', sans-serif;
-	font-weight: 300;
-	color: dimgray;
-}
-
-a {
-	text-decoration: none;
-}
 
 #contact {
 	text-align: center;

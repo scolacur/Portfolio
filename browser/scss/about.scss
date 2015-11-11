@@ -1,0 +1,134 @@
+/*About Page
+========================*/
+
+/*Colors
+========================*/
+$lightBlue: #37BEFF;
+$aqua: #7FFFD4;
+$cyan: #E0FFFF;
+$cream: #F5FFFA;
+$neonBlue: #00E3FF;
+$pastelBlue: #2EFCFF;
+$pastelOrange: #FB985C;
+$pastelPurple: #C688E8;
+$yellow: #FFFF00;
+$pastelYellow: #FFFF65;
+$pastelRed: #FF807D;
+$pastelPink: #FF8EB2;
+$brightBlue: #4DF9FF;
+
+/*Page Styles
+========================*/
+
+#about {
+	padding: 0px 100px 20px 180px;
+
+	h1 {
+		font-size: 60px;
+	}
+
+	#left-col {
+		float: left;
+		h1 {
+			margin-top: 92px;
+		}
+	}
+
+	#right-col{
+		float: right;
+	}
+
+	#traits {
+		// padding-left: 0px;
+		padding: 20px;
+		font-size: 60px;
+		list-style: none;
+		li {
+			// padding-left: 0px;
+		}
+	}
+
+
+	#carousel-wrapper, #carousel figure {
+		height: 100px;
+		line-height: 100px;
+	}
+
+	#carousel figure:nth-of-type(1) { -webkit-transform: rotateX(0deg) translateZ(86px); }
+	#carousel figure:nth-of-type(2) { -webkit-transform: rotateX(60deg) translateZ(86px); }
+	#carousel figure:nth-of-type(3) { -webkit-transform: rotateX(120deg) translateZ(86px); }
+	#carousel figure:nth-of-type(4) { -webkit-transform: rotateX(180deg) translateZ(86px); }
+	#carousel figure:nth-of-type(5) { -webkit-transform: rotateX(240deg) translateZ(86px); }
+	#carousel figure:nth-of-type(6) { -webkit-transform: rotateX(300deg) translateZ(86px); }
+	#carousel[data-state="1"] figure:nth-of-type(1),
+	#carousel[data-state="2"] figure:nth-of-type(2),
+	#carousel[data-state="3"] figure:nth-of-type(3),
+	#carousel[data-state="4"] figure:nth-of-type(4),
+	#carousel[data-state="5"] figure:nth-of-type(5),
+	#carousel[data-state="6"] figure:nth-of-type(6) { opacity: 1; }
+
+	#carousel-wrapper {
+		position: absolute;
+		top: 40%;
+		left: 35%;
+		width: 50%;
+		text-align: center;
+		-webkit-perspective: 1100px;
+		-moz-perspective: 1100px;
+		-o-perspective: 1100px;
+		perspective: 1100px;
+	}
+
+	#carousel {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 100;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		webkit-transition: all 1s;
+		-moz-transition: all 1s;
+		-o-transition: all 1s;
+		transition: all 1s;
+	}
+
+	#carousel figure {
+		display: block;
+		position: absolute;
+		width: 100%;
+		margin: 0;
+		font-size: 60px;
+		color: dimgray;
+		text-align: center;
+		opacity: .2;
+		webkit-transition: all 1s;
+		-moz-transition: all 1s;
+		-o-transition: all 1s;
+		transition: all 1s;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-o-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+
+	#fig-1 {
+		background-color: $pastelPink;
+	}
+	#fig-2 {
+		background-color: $aqua;
+	}
+	#fig-3 {
+		background-color: $pastelRed;
+	}
+	#fig-4 {
+		background-color: $pastelPurple;
+	}
+	#fig-5 {
+		background-color: $pastelOrange;
+	}
+	#fig-6 {
+		background-color: $pastelBlue;
+	}
+}
