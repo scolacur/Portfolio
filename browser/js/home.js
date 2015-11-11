@@ -6,7 +6,8 @@ app.config(function($stateProvider){
 	})
 	.state('projects', {
 		url: '/projects',
-		templateUrl: '/js/templates/projects.html'
+		templateUrl: '/js/templates/projects.html',
+		controller: 'projectCtrl'
 	})
 	.state('about', {
 		url: '/about',
