@@ -1,9 +1,5 @@
-/*Page Styles
+/*Projects Page
 ========================*/
-* {
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
 
 /*Colors
 ========================*/
@@ -173,7 +169,7 @@ $scrollTime: 1s;
   }
   &-5 {
     .skw-page__half--left .skw-page__content {
-      background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/img-test.jpg');
+      background-image: url('collage.png');
     }
     .skw-page__half--right .skw-page__content {
     //   background: lighten(#1C1C1C, 5%);

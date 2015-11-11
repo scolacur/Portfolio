@@ -9,6 +9,8 @@
 ========================*/
 $lightBlue: #37BEFF;
 $aqua: #7FFFD4;
+$cyan: #E0FFFF;
+$cream: #F5FFFA;
 
 /*Fonts
 ========================*/
@@ -35,7 +37,7 @@ footer {
 	font-size: 16px;
 	width:100%;
 	background-color: $aqua;
-	opacity: .5;
+	// opacity: .5;
 	height:40px;
 	position:fixed;
 	bottom:0;
@@ -65,7 +67,7 @@ footer {
 	padding-left: 20px;
 	padding-right: 20px;
 	background-color: $aqua;
-	opacity: .5;
+	// opacity: .5;
 
 	#main-logo {
 		float: left;
@@ -80,7 +82,7 @@ footer {
 		a {
 			display: inline-block;
 			height: 60px;
-			color: black;
+			color: dimgray;
 			text-decoration: none;
 		}
 	}
@@ -91,8 +93,10 @@ footer {
 		transition: all 0.25s ease-in-out;
 		text-align: center;
 		&:hover {
-			background-color: darken(gray, 20%);
-			color: darken(white, 20%);
+			// background-color: darken(gray, 20%);
+			background-color: dimgray;
+			color: #fdfdfd;
+			// color: darken(white, 20%);
 		}
 	}
 
