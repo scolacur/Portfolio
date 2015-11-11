@@ -13,44 +13,81 @@ $cream: #F5FFFA;
 
 #contact {
 	#left-col{
-		padding-left: 20px;
-		#note {
-			position: absolute;
-			display: none;
-			top: 17vh;
-			font-size: 1.9em;
+		// border: 1px solid red;
+		height: 80vh;
+		width: 30%;
+		float: left;
+		margin-left: -23%;
+		display: flex;
+		// flex-direction: row;
+		// -webkit-flex-direction: row;
+		align-items: center;
+		// justify-content: flex-start;
+		// -webkit-justify-content: flex-start;
+
+		// justify-content: space-between;
+		// padding-right: 80px;
+		// .note {
+		// 	// position: absolute;
+		// 	display: none;
+		// 	font-size: 1.9em;
+		// }
+		#wow {
+			// top: 17vh;
+			// left: 2%;
+			align-self: flex-start;
+			-ms-transform: rotate(20deg); /* IE 9 */
+			-webkit-transform: rotate(20deg); /* Safari */
+			transform: rotate(20deg);
+		}
+		#business {
+			// top: 67vh;
+			// left: 2%;
+			align-self: flex-end;
+			-ms-transform: rotate(-20deg); /* IE 9 */
+			-webkit-transform: rotate(-20deg); /* Safari */
+			transform: rotate(-20deg);
+		}
+		#omg {
+			-ms-transform: rotate(-20deg); /* IE 9 */
+			-webkit-transform: rotate(-20deg); /* Safari */
+			transform: rotate(-20deg);
+		}
+		#cool {
+			top: 67vh;
+			left: 18%;
 			-ms-transform: rotate(20deg); /* IE 9 */
 			-webkit-transform: rotate(20deg); /* Safari */
 			transform: rotate(20deg);
 		}
 		#arrow {
-			position: absolute;
-			top: 50vh;
-			left: 7%;
 			color: dimgray;
-			font-size: 40px;
+			z-index: -1;
+			// margin-right: 25%;
+			font-size: 3em;
+			// -webkit-transform: translate(-40px);
+			align-self: center;
 			-webkit-animation: pulsate 1s ease-out;
 			-webkit-animation-iteration-count: infinite;
 		}
-		canvas{
-			position:absolute;
-			left:0;
-			top:0;
-			z-index:0;
-			border:2px solid #000;
+		.invisible {
+			display: none;
 		}
+		// canvas{
+		// 	position:absolute;
+		// 	left:0;
+		// 	top:0;
+		// 	z-index:0;
+		// 	// border:2px solid #000;
+		// }
 	}
-	.card-container {
-		position: absolute;
-		// top: 400px;
-		top: 40vh;
-		left: -325px;
-		// margin-top: 300px;
-		margin-left: 30px;
-		float: left;
-		width: 350px;
 
+	.card-container {
+		// width: 5%;
+		z-index: 1;
+		margin-right: 10px;
 		img {
+			// margin: auto;
 			border-radius: 15px;
 			width: 100%;
 			-webkit-transition: -webkit-transform .5s ease-in-out;
@@ -60,13 +97,23 @@ $cream: #F5FFFA;
 	#main-content {
 		text-align: center;
 		margin: auto;
-		margin-top: 20px;
-		margin-bottom: 20px;
+		margin-top: 40px;
+		margin-bottom: 90px;
 		// margin-left: 20px;
 		// margin-right: 20px;
 		// margin: 20px 20px 40px 20px;
 		width: 40%;
+		.social {
+			display: flex;
+			height: 100%;
+			margin-bottom: 20px;
+			margin-top: 30px;
 
+
+			a {
+				flex-grow: 1;
+			}
+		}
 		i {
 			height: 50px;
 			width: 50px;
@@ -80,10 +127,13 @@ $cream: #F5FFFA;
 			font-size: 30px;
 		}
 
-		#github, #google, #linkedin, #resume {
-			transition: all 0.25s ease-in-out;
+		.card-top-container {
+			display: none;
+		}
 
-			&:hover{
+		#github, #google, #linkedin, #resume, #email {
+			transition: all 0.25s ease-in-out;
+			&:hover {
 				color: $aqua;
 			}
 		}
@@ -269,18 +319,55 @@ from { opacity: 0; }
 to   { opacity: 1; }
 }
 
-.slideRight{
-	-webkit-transform:translate(320px);
+.hidden {
+	-webkit-transform:translate(0%);
 }
-.slideLeft{
-	-webkit-transform:translate(0px);
+
+.initial {
+	-webkit-transform:translate(-77%);
+}
+
+.visible {
+	-webkit-transform:translate(92%);
 }
 
 /*Media Queries
 =============================*/
-@media (max-width: 1024px){
-	#contact {
-		width: 90%;
+@media (min-width: 769px) and (max-width: 1024px) {
+	#main-content {
+		width: 90% !important;
+		.card-top-container {
+			display: inline-block !important;
+			width: 50%;
+			margin-bottom: 40px;
+			img {
+				border-radius: 15px;
+				width: 100%;
+				-webkit-transition: -webkit-transform .5s ease-in-out;
+			}
+		}
+	}
+	#left-col, #left-col p, #left-col .card-container {
+		display: none !important;
+	}
+}
+
+@media (max-width: 768px){
+	#main-content {
+		width: 90% !important;
+		.card-top-container {
+			display: inline-block !important;
+			width: 100%;
+			margin-bottom: 40px;
+			img {
+				border-radius: 15px;
+				width: 100%;
+				-webkit-transition: -webkit-transform .5s ease-in-out;
+			}
+		}
+	}
+	#left-col, #left-col p, #left-col .card-container {
+		display: none !important;
 	}
 }
 

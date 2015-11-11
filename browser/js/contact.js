@@ -16,17 +16,20 @@ app.controller('contactCtrl', function($scope, $http){
 	};
 
 	var card = $('#card');
-	var note = $('#note');
+	var note = $('.note');
 	var toggle = true;
 
 	card.click(function(){
 		if (toggle){
-			card.addClass('slideRight');
+			card.removeClass('hidden');
+			card.removeClass('initial');
+			card.addClass('visible');
 			note.css({'display': 'initial'});
-			explode();
-			console.log('exploded');
+			// explode();
+			// console.log('exploded');
 		} else {
-			card.removeClass('slideRight');
+			card.removeClass('visible');
+			card.addClass('hidden');
 			note.css({'display': 'none'});
 		}
 		toggle = !toggle;

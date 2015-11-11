@@ -31,7 +31,7 @@ $pastelPink: #FF8EB2;
 	#left-col {
 		float: left;
 		h1 {
-			margin-top: 92px;
+			margin-top: 75px;
 		}
 	}
 
@@ -39,15 +39,6 @@ $pastelPink: #FF8EB2;
 		float: right;
 	}
 
-	#traits {
-		// padding-left: 0px;
-		padding: 20px;
-		font-size: 60px;
-		list-style: none;
-		li {
-			// padding-left: 0px;
-		}
-	}
 
 
 	#carousel-wrapper, #carousel figure {
@@ -132,5 +123,64 @@ $pastelPink: #FF8EB2;
 	}
 	#fig-6 {
 		background-color: $pastelOrange;
+	}
+
+	$diam: 2000px;
+
+	#circle-1{
+		top:300px;
+		left:800px;
+		height:$diam;
+	}
+
+	#circle-2{
+		top:300px;
+		left:-1450px;
+		height:$diam;
+		background-color:$pastelBlue;
+	}
+
+	.big-circle {
+		background-color: $pastelRed;
+		position:absolute;
+		display:inline-block;
+		width:$diam;
+		opacity: .3;
+		border-radius:100%;
+	}
+
+	.spin-clockwise {
+		animation:3s rot infinite linear;
+	}
+
+	.spin-counterclockwise {
+		animation:3s rot-counter infinite linear;
+	}
+
+	@keyframes rot {
+		from {
+			transform: rotate(0deg)
+			           translate(-($diam/2))
+			           rotate(0deg);
+		}
+		to {
+			transform: rotate(360deg)
+			           translate(-($diam/2))
+			           rotate(-360deg);
+		}
+	}
+
+
+	@keyframes rot-counter {
+		from {
+			transform: rotate(0deg)
+					   translate($diam/2)
+					   rotate(0deg);
+		}
+		to {
+			transform: rotate(-360deg)
+					   translate($diam/2)
+					   rotate(360deg);
+		}
 	}
 }

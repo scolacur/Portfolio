@@ -17,4 +17,16 @@ app.controller('aboutCtrl', function($scope){
 		// $(prev).css({'border-radius' : '0px'});
 
 	},1500);
+
+	var circle1 = $('#circle-1');
+	console.log('$circle-1', circle1);
+	var circle2 = $('#circle-2');
+	// var circle3 = $('#circle-3');
+
+	circle1.click(function(){
+		circle1.addClass('spin-clockwise');
+		setTimeout(function(){
+			circle2.addClass('spin-counterclockwise');
+		},500);
+	});
 });
