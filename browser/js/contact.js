@@ -21,22 +21,26 @@ app.controller('contactCtrl', function($scope, $http){
 
 	card.click(function(){
 		if (toggle){
-			card.removeClass('hidden');
-			card.removeClass('initial');
-			card.addClass('visible');
-			note.css({'display': 'initial'});
-			// explode();
-			// console.log('exploded');
+			card.removeClass('hidden').removeClass('initial').addClass('visible');
+			// note.css({'display': 'initial'});
+			setTimeout(explode, 500);
+			setTimeout(function(){
+				$('#canvas').css({'display' : 'none'});
+			}, 5000);
 		} else {
-			card.removeClass('visible');
-			card.addClass('hidden');
-			note.css({'display': 'none'});
+			card.removeClass('visible').addClass('hidden');
+			// note.css({'display': 'none'});
 		}
 		toggle = !toggle;
 	});
 
+
 	function explode() {
-			// création d'un tableau
+
+		$('#canvas').css({'display' : 'initial'});
+
+		var requestId;
+
 		var canvas = document.getElementById("canvas"),
 			context = canvas.getContext("2d"),
 			width = canvas.width = window.innerWidth,
@@ -51,9 +55,9 @@ app.controller('contactCtrl', function($scope, $http){
 				'#FF5722', '#795548'
 			];
 
-		for( var i = 0; i < 300; i++){
+		for( var i = 0; i < 50; i++){
 			particle.push({
-				x : width/2,
+				x : width/7,
 				y : height/2,
 				boxW : randomRange(5,20),
 				boxH : randomRange(5,20),
@@ -110,24 +114,24 @@ app.controller('contactCtrl', function($scope, $http){
 			height:300,
 			velX :0,
 			velY :-10,
-			img : loadImage("http://image.noelshack.com/fichiers/2015/12/1427051642-smiley.png"),
+			// img : loadImage("http://image.noelshack.com/fichiers/2015/12/1427051642-smiley.png"),
 			alphatop:0
 		};
 
 
 		function drawScreen(){
 			var size = 50;
-			var pFontName = "Lucida Sans Unicode";
-			context.font = size + "pt " + pFontName;
-			context.fillText("Confetti party !!!", width/2,150 );
+			// var pFontName = "Lucida Sans Unicode";
+			// context.font = size + "pt " + pFontName;
+			// context.fillText("Confetti party !!!", width/2,150 );
 			if (r1.alphatop < 1){
 				r1.alphatop += 0.01;
 			} else{
 				r1.alphatop = 1;
 			}
 			context.globalAlpha = r1.alphatop;
-			context.drawImage(r1.img,r1.x,r1.y);
-			context.textAlign = 'center';
+			// context.drawImage(r1.img,r1.x,r1.y);
+			// context.textAlign = 'center';
 
 
 
@@ -152,19 +156,19 @@ app.controller('contactCtrl', function($scope, $http){
 			}
 		}
 
-		function loadImage(url){
-			var img = document.createElement("img");
-			img.src=url;
-			return img;
-		}
-
 		function update(){
+			console.log(width, height);
 			context.clearRect(0,0,width,height);
 			drawScreen();
-			requestAnimationFrame(update);
+			requestId = requestAnimationFrame(update);
 		}
 
 		update();
+
+		setTimeout(function(){
+			window.cancelAnimationFrame(requestId);
+			requestId = undefined;
+		},5000);
 
 		function randomRange(min, max){
 			return min + Math.random() * (max - min );
@@ -187,7 +191,7 @@ app.controller('contactCtrl', function($scope, $http){
 			context.strokeSyle = "#000";
 			context.beginPath();
 			context.moveTo(cx, cy - outerRadius);
-
+			console.log("spikes: ",spikes);
 			for (i = 0; i < spikes; i++) {
 				x = cx + Math.cos(rot) * outerRadius;
 				y = cy + Math.sin(rot) * outerRadius;
