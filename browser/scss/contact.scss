@@ -23,6 +23,22 @@ $cream: #F5FFFA;
 			-webkit-transform: rotate(20deg); /* Safari */
 			transform: rotate(20deg);
 		}
+		#arrow {
+			position: absolute;
+			top: 50vh;
+			left: 7%;
+			color: dimgray;
+			font-size: 40px;
+			-webkit-animation: pulsate 1s ease-out;
+			-webkit-animation-iteration-count: infinite;
+		}
+		canvas{
+			position:absolute;
+			left:0;
+			top:0;
+			z-index:0;
+			border:2px solid #000;
+		}
 	}
 	.card-container {
 		position: absolute;
