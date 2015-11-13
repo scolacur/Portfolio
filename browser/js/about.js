@@ -11,7 +11,7 @@ app.controller('aboutCtrl', function($scope){
 		carousel.attr('data-state',(increment % 6) + 1);
 
 		prev = current;
-		current = '#fig-' +  + ((increment % 6) + 1);
+		current = '#fig-' + ((increment % 6) + 1);
 		// console.log(current);
 		// $(current).css({'border-radius' : '30px'});
 		// $(prev).css({'border-radius' : '0px'});

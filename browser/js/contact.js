@@ -48,12 +48,14 @@ app.controller('contactCtrl', function($scope, $http){
 			particle = [],
 			particleCount = 0,
 			gravity = 0.3,
-			colors = [
-				'#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5',
-				'#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50',
-				'#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800',
-				'#FF5722', '#795548'
-			];
+			colors =
+			// [
+			// 	'#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5',
+			// 	'#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50',
+			// 	'#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800',
+			// 	'#FF5722', '#795548'
+			// ];
+			['#7FFFD4','#E0FFFF','#33CCFF','#C688E8','#FF807D','#FF8EB2'];
 
 		for( var i = 0; i < 50; i++){
 			particle.push({
@@ -72,38 +74,7 @@ app.controller('contactCtrl', function($scope, $http){
 				color:colors[Math.floor(Math.random() * colors.length)],
 				anglespin:randomRange(-0.2,0.2),
 
-				draw : function(){
-					context.save();
-					context.translate(this.x,this.y);
-					context.rotate(this.angle);
-					context.fillStyle=this.color;
-					context.beginPath();
-					// drawStar(0, 0, 5, this.boxW, this.boxH);
-					context.fillRect(this.boxW/2*-1,this.boxH/2*-1,this.boxW,this.boxH);
-					context.fill();
-					context.closePath();
-					context.restore();
-					this.angle += this.anglespin;
-					this.velY*= 0.999;
-					this.velY += 0.3;
-					this.x += this.velX;
-					this.y += this.velY;
-
-					if(this.y < 0){
-						this.velY *= -0.2;
-						this.velX *= 0.9;
-					}
-					if (this.y > height){
-						this.anglespin = 0;
-						this.y = height;
-						this.velY *= -0.2;
-						this.velX *= 0.9;
-					}
-					if (this.x > width ||this.x< 0){
-						this.velX *= -0.5;
-					}
-
-				},
+				draw : draw
 			});
 		}
 
@@ -114,26 +85,18 @@ app.controller('contactCtrl', function($scope, $http){
 			height:300,
 			velX :0,
 			velY :-10,
-			// img : loadImage("http://image.noelshack.com/fichiers/2015/12/1427051642-smiley.png"),
 			alphatop:0
 		};
 
 
 		function drawScreen(){
 			var size = 50;
-			// var pFontName = "Lucida Sans Unicode";
-			// context.font = size + "pt " + pFontName;
-			// context.fillText("Confetti party !!!", width/2,150 );
 			if (r1.alphatop < 1){
 				r1.alphatop += 0.01;
 			} else{
 				r1.alphatop = 1;
 			}
 			context.globalAlpha = r1.alphatop;
-			// context.drawImage(r1.img,r1.x,r1.y);
-			// context.textAlign = 'center';
-
-
 
 			if(r1.alphatop === 1){
 				r1.velY*= 0.999;
@@ -157,7 +120,6 @@ app.controller('contactCtrl', function($scope, $http){
 		}
 
 		function update(){
-			console.log(width, height);
 			context.clearRect(0,0,width,height);
 			drawScreen();
 			requestId = requestAnimationFrame(update);
@@ -191,7 +153,6 @@ app.controller('contactCtrl', function($scope, $http){
 			context.strokeSyle = "#000";
 			context.beginPath();
 			context.moveTo(cx, cy - outerRadius);
-			console.log("spikes: ",spikes);
 			for (i = 0; i < spikes; i++) {
 				x = cx + Math.cos(rot) * outerRadius;
 				y = cy + Math.sin(rot) * outerRadius;
@@ -208,6 +169,39 @@ app.controller('contactCtrl', function($scope, $http){
 			context.closePath();
 			context.fillStyle=color;
 			context.fill();
+		}
+
+		function draw(){
+			context.save();
+			context.translate(this.x,this.y);
+			context.rotate(this.angle);
+			context.fillStyle=this.color;
+			context.beginPath();
+			// drawStar(0, 0, 5, this.boxW, this.boxH);
+			context.fillRect(this.boxW/2*-1,this.boxH/2*-1,this.boxW,this.boxH);
+			context.fill();
+			context.closePath();
+			context.restore();
+			this.angle += this.anglespin;
+			this.velY*= 0.999;
+			this.velY += 0.3;
+			this.x += this.velX;
+			this.y += this.velY;
+
+			if(this.y < 0){
+				this.velY *= -0.2;
+				this.velX *= 0.9;
+			}
+			if (this.y > height){
+				this.anglespin = 0;
+				this.y = height;
+				this.velY *= -0.2;
+				this.velX *= 0.9;
+			}
+			if (this.x > width ||this.x< 0){
+				this.velX *= -0.5;
+			}
+
 		}
 	}
 

@@ -50,7 +50,6 @@ app.controller('projectCtrl', function($scope){
 		});
 
 		$('#down-arrow').click(function(){
-			console.log('clicked');
 			if (scrolling) return;
 			navigateDown();
 		});

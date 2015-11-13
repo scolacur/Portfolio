@@ -17,14 +17,14 @@
 			<a href="mailto:stephencolacurcio@gmail.com">
 				<i id="email" class="fa fa-envelope"></i>
 			</a>
-			<a href="https://plus.google.com/+StephenColacurcio/posts">
+			<a target="_blank" href="https://plus.google.com/+StephenColacurcio/posts">
 				<i id="google" class="fa fa-google-plus"></i>
 			</a>
 			<a id="resume" target="_blank" href="https://www.dropbox.com/s/wkmhvz0lxgbbkef/Stephen%20Colacurcio%20Resume%2010-15.pdf?dl=0">Résumé</a>
-			<a href="https://linkedin.com/in/scolacurcio">
+			<a target="_blank" href="https://linkedin.com/in/scolacurcio">
 				<i id="linkedin" class="fa fa-linkedin"></i>
 			</a>
-			<a href="https://github.com/scolacur">
+			<a target="_blank" href="https://github.com/scolacur">
 				<i id="github" class="fa fa-github"></i>
 			</a>
 		</div>
@@ -35,7 +35,7 @@
 
 		<div id="form-container">
 			<h2>Say Hi!</h2>
-			<form name="contactForm" ng-submit="contactForm.$valid && sendMail(data)">
+			<form name="contactForm" ng-submit="contactForm.$valid && sendMail(formData)">
 				<input id="nameField" name="nameField" type="text" ng-model="formData.name" placeholder="Name" required/>
 				<input id="emailField" name="emailField" type="email" ng-model="formData.email" placeholder="Email" required/>
 				<textarea id="messageField" name="messageField" type="text" ng-model="formData.message" placeholder="Message" required/></textarea>

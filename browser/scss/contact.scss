@@ -217,7 +217,7 @@ $cream: #F5FFFA;
 				}
 				&:hover{
 					background-color: rgba(0,0,0,0);
-					border: dimgray solid 2px;
+					// border: dimgray solid 2px;
 					color: #fbfbfb;
 				}
 				&:focus {
@@ -228,18 +228,22 @@ $cream: #F5FFFA;
 
 			.ease {
 				width: 0px;
-				height: 73px;
+				height: 72px;
 				background-color: $aqua;
 				-webkit-transition: .3s ease;
 				-moz-transition: .3s ease;
 				-o-transition: .3s ease;
 				-ms-transition: .3s ease;
 				transition: .3s ease;
+				border: dimgray solid 2px;
+				// border-bottom: none;
 			}
 
 			.button-holder:hover .ease{
 			  width:100%;
 			  background-color:$aqua;
+			//   border: dimgray solid 2px;
+
 			}
 
 			/* Icons ---------------------------------- */
