@@ -17,18 +17,26 @@ app.controller('contactCtrl', function($scope, $http){
 
 	var card = $('#card');
 	var note = $('.note');
+	var arrow = $('#arrow');
 	var toggle = true;
 
-	card.click(function(){
+	arrow.click(function(){
 		if (toggle){
 			card.removeClass('hidden').removeClass('initial').addClass('visible');
+			// arrow.css({'display' : 'none'});
+
+
 			// note.css({'display': 'initial'});
 			setTimeout(explode, 500);
 			setTimeout(function(){
 				$('#canvas').css({'display' : 'none'});
-			}, 5000);
+				// arrow.css({'display' : 'initial'});
+
+			}, 4000);
 		} else {
 			card.removeClass('visible').addClass('hidden');
+
+
 			// note.css({'display': 'none'});
 		}
 		toggle = !toggle;
@@ -59,7 +67,7 @@ app.controller('contactCtrl', function($scope, $http){
 
 		for( var i = 0; i < 50; i++){
 			particle.push({
-				x : width/7,
+				x : width/2,
 				y : height/2,
 				boxW : randomRange(5,20),
 				boxH : randomRange(5,20),
