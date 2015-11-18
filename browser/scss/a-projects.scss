@@ -172,22 +172,12 @@ $scrollTime: 1s;
 					font-size: 22px;
 					font-weight: bold;
 					margin: 10px 15px;
-
 				}
 			}
 		}
 
 		.skw-page__content {
 			text-align: left;
-
-			// #down-arrow {
-			// 	font-size: 60px;
-			// 	padding-left: 170px;
-			// 	padding-top: 20px;
-			// 	color: dimgray;
-			// 	animation: pulsate 1s ease-out;
-			// 	animation-iteration-count: infinite;
-			// }
 		}
 	}
 
@@ -226,7 +216,58 @@ $scrollTime: 1s;
 			background-image: url(bgnoise.jpg);
 		}
 	}
+
 }
+	#progress-bar{
+		position: absolute;
+		z-index: 999;
+		width: 11px;
+		height: 40vh;
+		left: 50%;
+		top: 25.5%;
+		background-color: $cream;
+		border: solid $aqua 2px;
+		border-radius: 10px;
+		transform: skewX(-$skewDeg);
+
+		.progress-point {
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			background: linear-gradient($cream 25%, dimgray 150%);
+			border: solid $aqua 1px;
+			border-radius: 50px;
+			transform: skewX($skewDeg);
+			transition: transform $scrollTime;
+			// transform: translate3d($magicVH, -100%, 0);
+
+		}
+		#p1{
+			left: -120%;
+			top: 5%;
+		}
+		#p2{
+			left: -120%;
+			top: 25%;
+		}
+		#p3{
+			left: -120%;
+			top: 45%;
+		}
+		#p4{
+			left: -120%;
+			top: 65%;
+		}
+		#p5{
+			left: -120%;
+			top: 85%;
+		}
+		.current {
+			background: linear-gradient($aqua 25%, dimgray 150%);
+			border: solid $cream 1px;
+		}
+	}
+
 
 @-webkit-keyframes pulsate {
 	0% {transform: scale(0.9, 0.9)}
