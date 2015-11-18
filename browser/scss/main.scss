@@ -46,9 +46,7 @@ footer {
 	text-align: center;
 	font-size: 16px;
 	width:100%;
-	// background-color: $aqua;
 	background: linear-gradient(240deg, $aqua 40%, $pastelBlue 150%);
-	// opacity: .5;
 	height:40px;
 	position:fixed;
 	bottom:0;
@@ -63,7 +61,6 @@ footer {
 #wrapper {
 	margin: auto;
 	min-height:100%;
-	// position:relative;
 }
 
 
@@ -77,26 +74,42 @@ footer {
 #main-header {
 	padding-left: 20px;
 	padding-right: 20px;
-	// background-color: $aqua;
 	background: linear-gradient(10deg, $aqua 50%, $pastelBlue 150%);
 
-	// opacity: .5;
-
+	// #main-logo {
+	// 	float: left;
+	// 	font-size: 30px;
+	// 	min-height: 60px;
+	// }
+	@import url(http://fonts.googleapis.com/css?family=Lobster);
 	#main-logo {
+		font-size: 36px;
 		float: left;
-		font-size: 30px;
 		min-height: 60px;
+		text-align:center;
+		background-color: darken(dimgray, 30%);
+		color: transparent;
+		text-shadow: 0px 3px 2px rgba(255,255,255,0.5);
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		  background-clip: text;
+		font-family: 'Lobster', cursive;
+		&:hover {
+			color: $cream;
+		}
 	}
 
 	#links {
 		float: right;
-		min-height: 60px;
+		min-height: 65px;
 
 		a {
 			display: inline-block;
-			height: 60px;
+			height: 65px;
 			color: dimgray;
 			text-decoration: none;
+			font-size: 20px;
+			margin-left: -4px;
 		}
 	}
 
@@ -105,16 +118,17 @@ footer {
 		padding-right: 20px;
 		transition: all 0.25s ease-in-out;
 		text-align: center;
-		&:hover {
-			// background-color: darken(gray, 20%);
-			background-color: dimgray;
-			color: #fdfdfd;
-			// color: darken(white, 20%);
-		}
 	}
 
 	#links a {
+		// height: 20px;
 		padding-top: 20px;
+		padding-bottom: 20px;
+
+		&:hover {
+			background-color: dimgray;
+			color: #fdfdfd;
+		}
 	}
 	#main-logo {
 		padding-top: 10px;
@@ -158,4 +172,5 @@ footer {
 
 @import 'contact';
 @import 'a-projects';
+@import 'home';
 @import 'about';

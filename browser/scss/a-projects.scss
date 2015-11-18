@@ -27,27 +27,29 @@ $scrollTime: 1s;
 // top: 0;
 	width: 100%;
 
-
-
 	#coming-soon {
+		margin-top: 50%;
 		padding-left: 60px;
 		font-size: 40px;
+		// font-weight: bold;
 	}
 
 	&__half {
 		position: absolute;
 		top: 0;
-		width: 50%;
+		// width: 50%;
 		height: 100vh;
 		transition: transform $scrollTime;
 
 		&--left {
+			width: 49%;
 			left: 0;
 			transform: translate3d(-$magicVH, 100%, 0);
 		}
 
 		&--right {
-			left: 50%;
+			width: 51%;
+			left: 49%;
 			transform: translate3d($magicVH, -100%, 0);
 		}
 
@@ -75,7 +77,7 @@ $scrollTime: 1s;
 	&__content {
 		display: flex;
 		// align-items: center;
-		justify-content: center;
+		// justify-content: center;
 		flex-flow: column wrap;
 		position: absolute;
 		left: 0;
@@ -106,14 +108,28 @@ $scrollTime: 1s;
 	}
 
 	&__heading {
-		margin-top: -100px;
+		// margin-top: -100px;
+		margin-top: 150px;
 		margin-bottom: 15px;
 		font-size: 30px;
+		a{
+			font-weight: bold;
+		}
 	}
 
 	&__description {
 		font-size: 18px;
+		padding: 0px;
 		// text-align: center;
+		li {
+			font-weight: bold;
+			display: inline-block;
+			list-style-type: none;
+			border: solid dimgray 2px;
+			border-radius: 5px;
+			padding: 5px;
+			margin-bottom: 5px;
+		}
 	}
 
 	&__link {
@@ -125,49 +141,58 @@ $scrollTime: 1s;
 			background-image: url('steve-working.jpg');
 		}
 		.skw-page__half--right .skw-page__content {
-			//   background: lighten(#1C1C1C, 5%);
 			background-image: url(bgnoise.jpg);
+		}
+
+		#p1-content {
+			margin-left: -3%;
+
+			#p1-heading {
+				// display: block;
+				margin-top: 39%;
+				align-self: center;
+				// margin-left: 100px;
+				font-size: 60px;
+			}
+			#scroll-icons {
+				margin-top: 10px;
+				display: flex;
+				justify-content: center;
+				#arrows {
+					height: 40px;
+				}
+
+				#mouse {
+					stroke: dimgray;
+					height: 50px;
+					margin-bottom: 20px;
+					margin-top: -5px;
+				}
+				p {
+					font-size: 22px;
+					font-weight: bold;
+					margin: 10px 15px;
+
+				}
+			}
 		}
 
 		.skw-page__content {
 			text-align: left;
 
-			#down-arrow {
-				font-size: 60px;
-				padding-left: 170px;
-				padding-top: 20px;
-				color: dimgray;
-				-webkit-animation: pulsate 1s ease-out;
-				-webkit-animation-iteration-count: infinite;
-			}
-			#arrows {
-				display: inline;
-				color: dimgray;
-				width: 80px;
-				margin-left: 100px;
-			}
-			#mouse {
-				display: inline;
-				color: blue;
-				width: 80px;
-				margin-left: 100px;
-			}
-
-			#p1-heading {
-
-				// display: block;
-				margin-left: 100px;
-				font-size: 60px;
-			}
-			#arrows {
-
-			}
+			// #down-arrow {
+			// 	font-size: 60px;
+			// 	padding-left: 170px;
+			// 	padding-top: 20px;
+			// 	color: dimgray;
+			// 	animation: pulsate 1s ease-out;
+			// 	animation-iteration-count: infinite;
+			// }
 		}
 	}
 
 	&-2 {
 		.skw-page__half--left .skw-page__content {
-			//   background: lighten(#1C1C1C, 5%);
 			background-image: url(bgnoise.jpg);
 		}
 		.skw-page__half--right .skw-page__content {
@@ -180,14 +205,12 @@ $scrollTime: 1s;
 			background-image: url('spheres.png');
 		}
 		.skw-page__half--right .skw-page__content {
-			//   background: lighten(#1C1C1C, 5%);
 			background-image: url(bgnoise.jpg);
 		}
 	}
 
 	&-4 {
 		.skw-page__half--left .skw-page__content {
-			//   background: lighten(#1C1C1C, 5%);
 			background-image: url(bgnoise.jpg);
 		}
 		.skw-page__half--right .skw-page__content {
@@ -200,14 +223,13 @@ $scrollTime: 1s;
 			background-image: url('collage.png');
 		}
 		.skw-page__half--right .skw-page__content {
-			//   background: lighten(#1C1C1C, 5%);
 			background-image: url(bgnoise.jpg);
 		}
 	}
 }
 
 @-webkit-keyframes pulsate {
-	0% {-webkit-transform: scale(0.9, 0.9)}
-	50% {-webkit-transform: scale(1, 1); -webkit-transform: translateX(4px);}
-	100% {-webkit-transform: scale(0.9, 0.9)}
+	0% {transform: scale(0.9, 0.9)}
+	50% {transform: scale(1, 1); transform: translateX(4px);}
+	100% {transform: scale(0.9, 0.9)}
 }
