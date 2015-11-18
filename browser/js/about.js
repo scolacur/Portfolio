@@ -1,10 +1,11 @@
 app.controller('aboutCtrl', function($scope){
-	var width = 960,
-		height = 500;
 
-	var svg = d3.select("#about").append("svg")
-		.attr("width", width)
-		.attr("height", height);
+	// angular.element(document).ready(function(){
+	var skillsCloud = $("#skills-cloud");
+	var width = skillsCloud.width();
+	var height = skillsCloud.height();
+
+	var svg = d3.select("#skills-cloud").append("svg")
 
 	var skills = [
 		{name: "JavaScript", level: 3},
@@ -16,13 +17,26 @@ app.controller('aboutCtrl', function($scope){
 		{name: "Git", level: 3},
 		{name: "CSS3", level: 3},
 		{name: "HTML5", level: 3},
+		{name: "Resonsive Design", level: 2},
+		{name: "Gulp", level: 2},
+		{name: "Mocha & Chai", level: 2},
+		{name: "jQuery", level: 2},
+		{name: "Bootstrap", level: 2},
+		{name: "Web-Audio", level: 2},
+		{name: "Chrome Extensions", level: 1},
+		{name: "SQL", level: 1},
+		{name: "WebSockets", level: 1},
+		{name: "MIDI", level: 1},
+		{name: "Java", level: 1},
+		{name: "C++", level: 1},
+
+
 	];
 
 	//create nodes
 	var nodes = d3.range(skills.length).map(function(i) {
 		return {
-			// radius: Math.random() * 40 + 30,
-			radius: skills[i].level*15 +30,
+			radius: skills[i].level*15 +20,
 			label: skills[i].name,
 			skillLevel: skills[i].level
 		};
@@ -35,7 +49,7 @@ app.controller('aboutCtrl', function($scope){
 		root.radius = 0;
 		root.fixed = true;
 
-	console.log("nodes: ",nodes);
+	// console.log("nodes: ",nodes);
 
 
 	// console.log("nodes 0:", nodes[0]);
@@ -72,7 +86,7 @@ app.controller('aboutCtrl', function($scope){
 			"text-anchor": "middle",
 		});
 
-	console.log(svg.selectAll("circle")[0][0]);
+	// console.log(svg.selectAll("circle")[0][0]);
 
 	var force = d3.layout.force()
 		.gravity(0.05)
@@ -106,7 +120,6 @@ app.controller('aboutCtrl', function($scope){
 	});
 
 	function collide(node) {
-		console.log('node: ', node);
 	  var r = node.radius + 16,
 	      nx1 = node.x - r,
 	      nx2 = node.x + r,
@@ -129,4 +142,7 @@ app.controller('aboutCtrl', function($scope){
 	    return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
 	  };
 	}
+
+	// });
+
 });
