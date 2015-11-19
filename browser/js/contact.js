@@ -21,14 +21,16 @@ app.controller('contactCtrl', function($scope, $http){
 	console.log(overlay);
 
 	resumeLabel.click(function(){
-		console.log('clicked');
-		overlay.removeClass('hidden').addClass('visible');
+		overlay.css({'opacity': '.8', 'z-index': '1'});
+	});
+	overlay.click(function(){
+		overlay.css({'opacity': '0', 'z-index': '-1'});
 	});
 
-	var card = $('#card');
-	var note = $('.note');
-	var arrow = $('#arrow');
-	var toggle = true;
+	// var card = $('#card');
+	// var note = $('.note');
+	// var arrow = $('#arrow');
+	// var toggle = true;
 
 	// arrow.click(function(){
 	// 	if (toggle){
