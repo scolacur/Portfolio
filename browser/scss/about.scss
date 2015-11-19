@@ -36,26 +36,18 @@ $pastelPink: #FF8EB2;
 		h1, p, a {
 			color: black;
 			text-align: justify;
-			// font-weight: 400;
 		}
 		h1 {
-			// font-size: 30px;
 			margin-bottom: 30px;
-			float: left;
 		}
 		p {
 			font-size: 20px;
 			line-height: 150%;
 			display: block;
+			margin-top: 0px;
 		}
-
 		a {
 			font-weight:bold;
-		}
-		img {
-			width: 200px;
-			// display: inline-block;
-			float: right;
 		}
 	}
 	#skills-cloud{
@@ -91,13 +83,19 @@ $pastelPink: #FF8EB2;
 		overflow: auto;
 	}
 	#about {
+		height: 55vh;
+		background-position: bottom;
+
 		#skills-cloud {
 			display: none;
 		}
 		#skills-mobile {
+			background-image: url('bgnoise.jpg');
 			width: 100%;
 			padding: 10px;
 			display: block;
+			margin-bottom: 70px;
+
 			h1 {
 				font-size: 36px;
 				margin-top: 0px;
@@ -106,11 +104,12 @@ $pastelPink: #FF8EB2;
 			}
 			#skill-list {
 				display: flex;
+				justify-content: space-around;
 				flex-flow: wrap;
 				width: 90%;
 				margin: auto;
 				.skill-circle {
-					display: inline-block;
+					// display: inline-block;
 					width: 80px;
 					height: 80px;
 					border-radius: 100px;
@@ -126,9 +125,31 @@ $pastelPink: #FF8EB2;
 		#about-me {
 			float: none !important;
 			width: 100%;
-			height: 55%;
-			h1 {
-				width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+@media (max-width: 768px){
+	#about {
+		background-image: none;
+		height: 100%;
+		// height: 20vh;
+		// font-size: .9rem;
+		background-size: cover;
+		// max-height: 70vh;
+		// min-height: 55vh;
+		// max-height: 75vh;
+		#about-me {
+			height: 100%;
+			background-image: url('steve-pic-2.jpg');
+			background-position: bottom;
+			opacity: .8;
+			padding: 0px;
+			#overlay-mobile {
+				background-color: rgba(255,255,255,.5);
+				padding: 5%;
+				margin-bottom: 0px;
 			}
 		}
 	}
