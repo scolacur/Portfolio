@@ -23,20 +23,23 @@ app.config(function($stateProvider){
 });
 
 app.controller('homeCtrl', function(){
-	var increment = 0;
-	var carousel = $('#carousel');
-	var current = '#fig-1';
-	var prev;
-	setInterval( function(){
-		increment++;
-		carousel.css({
-			'-webkit-transform': 'rotateX(' + (increment * -60) + 'deg)'
-		});
-		carousel.attr('data-state',(increment % 6) + 1);
 
-		prev = current;
-		current = '#fig-' + ((increment % 6) + 1);
-	},1500);
+		var increment = 0;
+		var carousel = $('#carousel');
+		var current = '#fig-1';
+		var prev;
+		setInterval(function(){
+			if ($(window).width() > 768) {
+				increment++;
+				carousel.css({
+					'-webkit-transform': 'rotateX(' + (increment * -60) + 'deg)'
+				});
+				carousel.attr('data-state',(increment % 6) + 1);
+
+				prev = current;
+				current = '#fig-' + ((increment % 6) + 1);
+			}
+		},1500);
 
 	// var circle1 = $('#circle-1');
 	// console.log('$circle-1', circle1);

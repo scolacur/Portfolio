@@ -14,33 +14,43 @@ app.controller('contactCtrl', function($scope, $http){
 			$scope.formData = {};
 		});
 	};
+	//
+	var resumeLabel = $('#resume');
+	console.log(resumeLabel);
+	var overlay = $('#overlay');
+	console.log(overlay);
+
+	resumeLabel.click(function(){
+		console.log('clicked');
+		overlay.removeClass('hidden').addClass('visible');
+	});
 
 	var card = $('#card');
 	var note = $('.note');
 	var arrow = $('#arrow');
 	var toggle = true;
 
-	arrow.click(function(){
-		if (toggle){
-			card.removeClass('hidden').removeClass('initial').addClass('visible');
-			// arrow.css({'display' : 'none'});
-
-
-			// note.css({'display': 'initial'});
-			setTimeout(explode, 500);
-			setTimeout(function(){
-				$('#canvas').css({'display' : 'none'});
-				// arrow.css({'display' : 'initial'});
-
-			}, 4000);
-		} else {
-			card.removeClass('visible').addClass('hidden');
-
-
-			// note.css({'display': 'none'});
-		}
-		toggle = !toggle;
-	});
+	// arrow.click(function(){
+	// 	if (toggle){
+	// 		card.removeClass('hidden').removeClass('initial').addClass('visible');
+	// 		// arrow.css({'display' : 'none'});
+	//
+	//
+	// 		// note.css({'display': 'initial'});
+	// 		setTimeout(explode, 500);
+	// 		setTimeout(function(){
+	// 			$('#canvas').css({'display' : 'none'});
+	// 			// arrow.css({'display' : 'initial'});
+	//
+	// 		}, 4000);
+	// 	} else {
+	// 		card.removeClass('visible').addClass('hidden');
+	//
+	//
+	// 		// note.css({'display': 'none'});
+	// 	}
+	// 	toggle = !toggle;
+	// });
 
 
 	function explode() {

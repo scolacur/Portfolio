@@ -1,9 +1,5 @@
 <div id="contact">
-	<div id="left-col">
-		<!-- <p class="note" id="wow">Wow!</p> -->
-		<!-- <p class="note" id="omg">OMG</p>
-		<p class="note" id="business">Business!</p>
-		<p class="note" id="cool">c00l!!1</p> -->
+	<!-- <div id="left-col">
 		<div class="card-container">
 			<canvas id="canvas"></canvas>
 			<img id="card" class="hidden" src="sc-resume.png"></img>
@@ -11,17 +7,18 @@
 		<div id="arrow-container">
 			<i id="arrow" class="fa fa-arrow-left"></i>
 		</div>
-	</div>
+	</div> -->
+	<div id="overlay" class="hidden"></div>
 	<div id="main-content">
-		<div class="social">
+			<div class="social">
 			<a href="mailto:stephencolacurcio@gmail.com">
 				<i id="email" class="fa fa-envelope"></i>
 			</a>
 			<a target="_blank" href="https://plus.google.com/+StephenColacurcio/posts">
 				<i id="google" class="fa fa-google-plus"></i>
 			</a>
-			<!-- <a id="resume" href="sc-resume.pdf">Résumé</a> -->
-			<a id="resume" target="_blank" href="https://www.dropbox.com/s/wkmhvz0lxgbbkef/Stephen%20Colacurcio%20Resume%2010-15.pdf?dl=0">Résumé</a>
+			<a id="resume">Résumé</a>
+			<!-- <a id="resume" target="_blank" href="https://www.dropbox.com/s/wkmhvz0lxgbbkef/Stephen%20Colacurcio%20Resume%2010-15.pdf?dl=0">Résumé</a> -->
 			<a target="_blank" href="https://linkedin.com/in/scolacurcio">
 				<i id="linkedin" class="fa fa-linkedin"></i>
 			</a>
@@ -29,7 +26,6 @@
 				<i id="github" class="fa fa-github"></i>
 			</a>
 		</div>
-
 		<div id="form-container">
 			<h2>Let's chat.</h2>
 			<form name="contactForm" ng-submit="contactForm.$valid && sendMail(formData)">
