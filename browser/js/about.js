@@ -1,13 +1,11 @@
 app.controller('aboutCtrl', function($scope){
-
 	// angular.element(document).ready(function(){
 	var skillsCloud = $("#skills-cloud");
 	var width = skillsCloud.width();
 	var height = skillsCloud.height();
+	var svg = d3.select("#skills-cloud").append("svg");
 
-	var svg = d3.select("#skills-cloud").append("svg")
-
-	var skills = [
+	$scope.skills = [
 		{name: "JavaScript", level: 3},
 		{name: "MongoDB", level: 3},
 		{name: "Express.js", level: 3},
@@ -31,17 +29,43 @@ app.controller('aboutCtrl', function($scope){
 		{name: "C++", level: 1},
 	];
 
+	$scope.colors = [
+		'#7FFFD4',
+		'#E0FFFF',
+		'#33CCFF',
+		'#C688E8',
+		'#FF807D',
+		'#FF8EB2'
+	];
+
+	$scope.skills.map(function(e,i){
+		e.color = $scope.colors[i%6];
+	});
+
+	console.log($scope.skills);
+	// angular.element(document).ready(function(){
+		// setTimeout(function(){
+		// var mobileSkills = $('#skill-list').children();
+		// // console.log(mobileSkills);
+		// mobileSkills.map(function(i){
+		// 	console.log(mobileSkills[i]);
+		// 	// mobileSkills[i].css({'background-color': $scope.colors[i % 6]});
+		// });
+		// }, 1000);
+	// });
+	// var mobileSkills = $('#skill-list')[0];
+
 	//create nodes
-	var nodes = d3.range(skills.length).map(function(i) {
+	var nodes = d3.range($scope.skills.length).map(function(i) {
 		return {
-			radius: skills[i].level*18 +14,
-			label: skills[i].name,
-			skillLevel: skills[i].level
+			radius: $scope.skills[i].level*18 +14,
+			label: $scope.skills[i].name,
+			skillLevel: $scope.skills[i].level,
+			bgColor: $scope.skills[i].color
 		};
 	});
 
-	var	root = nodes[0],
-		colors = ['#7FFFD4','#E0FFFF','#33CCFF','#C688E8','#FF807D','#FF8EB2'];
+	var	root = nodes[0];
 		root.radius = 0;
 		root.fixed = true;
 
@@ -53,14 +77,10 @@ app.controller('aboutCtrl', function($scope){
 	var circles = groups.append('circle')
 		.data(nodes.slice(1))
 		.attr("r", function(d) { return d.radius; })
-		.style("fill", function(d, i) {
-			return colors[i % 6];
-		});
+		.style("fill", function(d, i) { return d.bgColor; });
 
 	var label = groups.append("text")
-		.text(function(d){
-			return d.label;
-		})
+		.text(function(d){ return d.label; })
 		.attr({
 			"alignment-baseline": "middle",
 			"text-anchor": "middle",
@@ -81,10 +101,12 @@ app.controller('aboutCtrl', function($scope){
 
 		while (++i < n) q.visit(collide(nodes[i]));
 
+		//move circles
 		svg.selectAll("circle")
 			.attr("cx", function(d) { return d.x; })
 			.attr("cy", function(d) { return d.y; });
 
+		//move labels
 		svg.selectAll("text")
 			.attr("x", function(d) { return d.x; })
 			.attr("y", function(d) { return d.y; });
@@ -92,8 +114,8 @@ app.controller('aboutCtrl', function($scope){
 
 	svg.on("mousemove", function() {
 		var p1 = d3.mouse(this);
-			root.px = p1[0];
-			root.py = p1[1];
+		root.px = p1[0];
+		root.py = p1[1];
 		force.resume();
 	});
 
@@ -125,7 +147,5 @@ app.controller('aboutCtrl', function($scope){
 			return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
 		};
 	}
-
 	// });
-
 });
