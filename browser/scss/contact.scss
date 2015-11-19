@@ -22,18 +22,56 @@ $cream: #F5FFFA;
 	background-size: 100%;
 	background-position: 30%;
 
+	#resume-container {
+		display: none;
+		z-index: 100;
+		height: 100%;
+		position: fixed;
+		width: 36%;
+		left: 49.5%;
+		top: 0%;
+		margin-left: -18%;
+		text-align: center;
+		opacity: 1;
+		animation: fadein .5s;
+
+
+		button {
+			position: relative;
+			top: -3em;
+			background-color: $aqua;
+			font-size: 24px;
+			font-weight: 300;
+			color: dimgray;
+			border: solid dimgray 2px;
+			border-radius: 10px;
+			padding: 7px;
+			transition: all 0.25s ease-in-out;
+
+			&:hover {
+				color: $cream;
+			}
+		}
+		img {
+			margin-bottom: 1%;
+			padding-top: 5%;
+			opacity: 1;
+			height: 92%;
+		}
+	}
 	#overlay {
 		position: absolute;
 		top: 0;
 		height: 100%;
 		width: 100%;
-		border-radius: 10px;
+		// border-radius: 10px;
 		// background: rgba(20,20,20,.75);
 		background-color: black;
 		// padding: 10px;
 		opacity: 0;
+		// display: none;
 		z-index: -1;
-		transition: opacity .5s ease;
+		transition: opacity .25s ease-in-out;
 	}
 
 	#left-col{
@@ -115,6 +153,10 @@ $cream: #F5FFFA;
 			}
 		}
 
+		#resume {
+			cursor: pointer;
+		}
+
 		#form-container {
 			background-image: url('bgnoise.jpg');
 
@@ -133,8 +175,8 @@ $cream: #F5FFFA;
 			input, textarea {
 				padding-left: 50px;
 				font-size: 14px;
+				font-weight: 400;
 				background-color: #fbfbfb;
-
 				&:focus {
 					outline: none;
 					border: solid 2px dimgray;
@@ -262,15 +304,15 @@ from { opacity: 0; }
 to   { opacity: 1; }
 }
 
-.hidden {
-	transform:opacity(0%);
-}
-.initial {
-	transform:translate(-150%);
-}
-.visible {
-	transform:opacity(100%);
-}
+// .hidden {
+// 	transform:opacity(0%);
+// }
+// .initial {
+// 	transform:translate(-150%);
+// }
+// .visible {
+// 	transform:opacity(100%);
+// }
 
 /*Media Queries
 =============================*/
