@@ -153,6 +153,10 @@ $cream: #F5FFFA;
 			}
 		}
 
+		#resume {
+			cursor: pointer;
+		}
+
 		#form-container {
 			background-image: url('bgnoise.jpg');
 
@@ -171,8 +175,8 @@ $cream: #F5FFFA;
 			input, textarea {
 				padding-left: 50px;
 				font-size: 14px;
+				font-weight: 400;
 				background-color: #fbfbfb;
-
 				&:focus {
 					outline: none;
 					border: solid 2px dimgray;
