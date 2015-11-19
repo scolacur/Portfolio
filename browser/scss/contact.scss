@@ -22,6 +22,43 @@ $cream: #F5FFFA;
 	background-size: 100%;
 	background-position: 30%;
 
+	#resume-container {
+		display: none;
+		z-index: 100;
+		height: 100%;
+		position: fixed;
+		width: 36%;
+		left: 49.5%;
+		top: 0%;
+		margin-left: -18%;
+		text-align: center;
+		opacity: 1;
+		animation: fadein .5s;
+
+
+		button {
+			position: relative;
+			top: -3em;
+			background-color: $aqua;
+			font-size: 24px;
+			font-weight: 300;
+			color: dimgray;
+			border: solid dimgray 2px;
+			border-radius: 10px;
+			padding: 7px;
+			transition: all 0.25s ease-in-out;
+
+			&:hover {
+				color: $cream;
+			}
+		}
+		img {
+			margin-bottom: 1%;
+			padding-top: 5%;
+			opacity: 1;
+			height: 92%;
+		}
+	}
 	#overlay {
 		position: absolute;
 		top: 0;
@@ -34,37 +71,7 @@ $cream: #F5FFFA;
 		opacity: 0;
 		// display: none;
 		z-index: -1;
-		transition: opacity .5s ease;
-
-		#resume-container {
-			// background-image: url('sc-resume.png');
-			// background-size: cover;
-			margin: auto;
-			height: 100%;
-			// padding-top: 3%;
-			width: 35%;
-			text-align: center;
-			button {
-				background-color: transparent;
-				font-size: 24px;
-				font-weight: 300;
-				color: white;
-				border: solid white 2px;
-				border-radius: 10px;
-				padding: 5px;
-
-				&:hover {
-					background-color: $aqua;
-				}
-			}
-			img {
-				margin-bottom: 1%;
-				padding-top: 5%;
-				opacity: 1;
-				height: 92%;
-			}
-		}
-
+		transition: opacity .25s ease-in-out;
 	}
 
 	#left-col{

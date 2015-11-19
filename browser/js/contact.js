@@ -18,13 +18,18 @@ app.controller('contactCtrl', function($scope, $http){
 	var resumeLabel = $('#resume');
 	console.log(resumeLabel);
 	var overlay = $('#overlay');
+	var resume = $('#resume-container');
 	console.log(overlay);
 
 	resumeLabel.click(function(){
-		overlay.css({'opacity': '.8', 'z-index': '1'});
+		overlay.css({'opacity': '.7', 'z-index': '1'});
+		resume.css({'display': 'block'});
+
 	});
 	overlay.click(function(){
+		console.log('go away');
 		overlay.css({'opacity': '0', 'z-index': '-1'});
+		resume.css({'display': 'none'});
 	});
 
 	// var card = $('#card');
