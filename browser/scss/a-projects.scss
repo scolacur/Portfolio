@@ -15,6 +15,7 @@ $cream: #F5FFFA;
 	overflow: hidden;
 	position: relative;
 	height: 87vh;
+	background-image: url('bgnoise.jpg');
 }
 
 $skewDeg: 18deg;
@@ -45,16 +46,19 @@ $scrollTime: 1s;
 			width: 49%;
 			left: 0;
 			transform: translate3d(-$magicVH, 100%, 0);
+
 		}
 
 		&--right {
 			width: 51%;
 			left: 49%;
 			transform: translate3d($magicVH, -100%, 0);
+
 		}
 
 		.skw-page.active & {
 			transform: translate3d(0,0,0);
+
 		}
 	}
 
@@ -87,6 +91,7 @@ $scrollTime: 1s;
 		padding: 0 30%;
 		transform: skewX($skewDeg);
 		transition: transform $scrollTime, opacity $scrollTime;
+
 		background-size: cover;
 
 		.skw-page__half--left & {
@@ -218,59 +223,58 @@ $scrollTime: 1s;
 	}
 
 }
-	#progress-bar{
-		position: absolute;
-		z-index: 999;
-		width: 11px;
-		height: 40vh;
-		left: 50%;
-		top: 25.5%;
-		background-color: $cream;
-		border: solid $aqua 2px;
-		border-radius: 10px;
-		transform: skewX(-$skewDeg);
+	// #progress-bar{
+	// 	position: absolute;
+	// 	z-index: 999;
+	// 	width: 11px;
+	// 	height: 40vh;
+	// 	left: 50%;
+	// 	top: 25.5%;
+	// 	background-color: $cream;
+	// 	border: solid $aqua 2px;
+	// 	border-radius: 10px;
+	// 	transform: skewX(-$skewDeg);
+		//
+		// .progress-point {
+		// 	position: absolute;
+		// 	width: 25px;
+		// 	height: 25px;
+		// 	background: linear-gradient($cream 25%, dimgray 150%);
+		// 	border: solid $aqua 1px;
+		// 	border-radius: 50px;
+		// 	transform: skewX($skewDeg);
+		// 	transition: transform $scrollTime;
+		// 	// transform: translate3d($magicVH, -100%, 0);
+		// }
+		// #p1{
+		// 	left: -120%;
+		// 	top: 5%;
+		// }
+		// #p2{
+		// 	left: -120%;
+		// 	top: 25%;
+		// }
+		// #p3{
+		// 	left: -120%;
+		// 	top: 45%;
+		// }
+		// #p4{
+		// 	left: -120%;
+		// 	top: 65%;
+		// }
+		// #p5{
+		// 	left: -120%;
+		// 	top: 85%;
+		// }
+		// .current {
+		// 	background: linear-gradient($aqua 25%, dimgray 150%);
+		// 	border: solid $cream 1px;
+		// }
+	// }
 
-		.progress-point {
-			position: absolute;
-			width: 25px;
-			height: 25px;
-			background: linear-gradient($cream 25%, dimgray 150%);
-			border: solid $aqua 1px;
-			border-radius: 50px;
-			transform: skewX($skewDeg);
-			transition: transform $scrollTime;
-			// transform: translate3d($magicVH, -100%, 0);
 
-		}
-		#p1{
-			left: -120%;
-			top: 5%;
-		}
-		#p2{
-			left: -120%;
-			top: 25%;
-		}
-		#p3{
-			left: -120%;
-			top: 45%;
-		}
-		#p4{
-			left: -120%;
-			top: 65%;
-		}
-		#p5{
-			left: -120%;
-			top: 85%;
-		}
-		.current {
-			background: linear-gradient($aqua 25%, dimgray 150%);
-			border: solid $cream 1px;
-		}
-	}
-
-
-@-webkit-keyframes pulsate {
-	0% {transform: scale(0.9, 0.9)}
-	50% {transform: scale(1, 1); transform: translateX(4px);}
-	100% {transform: scale(0.9, 0.9)}
-}
+// @-webkit-keyframes fadeout {
+// 	0% {transform: opacity(1);}
+// 	50% {transform: opacity(.9);}
+// 	100% {transform: opacity(0);}
+// }

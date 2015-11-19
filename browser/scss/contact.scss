@@ -12,6 +12,8 @@ $cream: #F5FFFA;
 ========================*/
 
 #contact {
+	// background-image: url('bgnoise.jpg');	
+	// background-size: cover;
 	#left-col{
 		height: 80vh;
 		width: 30%;
@@ -21,27 +23,6 @@ $cream: #F5FFFA;
 		display: flex;
 		align-items: center;
 
-		// .note {
-		// 	// position: absolute;
-		// 	display: none;
-		// 	font-size: 1.9em;
-		// }
-		// #wow {
-		// 	align-self: flex-start;
-		// 	transform: rotate(20deg);
-		// }
-		// #business {
-		// 	align-self: flex-end;
-		// 	transform: rotate(-20deg);
-		// }
-		// #omg {
-		// 	transform: rotate(-20deg);
-		// }
-		// #cool {
-		// 	top: 67vh;
-		// 	left: 18%;
-		// 	transform: rotate(20deg);
-		// }
 		#arrow {
 			color: dimgray;
 			z-index: -1;
@@ -115,6 +96,9 @@ $cream: #F5FFFA;
 		}
 
 		#form-container {
+			background-image: url('bgnoise.jpg');
+
+			// background-color: $cream;
 			text-align: center;
 			margin: auto;
 			border-radius: 10px;

@@ -12,7 +12,7 @@ app.controller('projectCtrl', function($scope){
 			scrolling = true;
 
 			$(pgPrefix + curPage).removeClass("inactive").addClass("active");
-			$(progPrefix + curPage).addClass("current");
+			// $(progPrefix + curPage).addClass("current");
 			setTimeout(function() {
 				scrolling = false;
 			}, animTime);
@@ -22,7 +22,7 @@ app.controller('projectCtrl', function($scope){
 			if (curPage === 1) return;
 			curPage--;
 			$(pgPrefix + (curPage + 1)).removeClass("active");
-			$(progPrefix + (curPage + 1)).removeClass("current");
+			// $(progPrefix + (curPage + 1)).removeClass("current");
 
 			pagination();
 		}
@@ -30,8 +30,8 @@ app.controller('projectCtrl', function($scope){
 		function navigateDown() {
 			if (curPage === numOfPages) return;
 			curPage++;
-			$(pgPrefix + (curPage - 1)).removeClass("active");
-			$(progPrefix + (curPage -1)).removeClass("current");
+			$(pgPrefix + (curPage - 1)).addClass("inactive");
+			// $(progPrefix + (curPage -1)).removeClass("current");
 			pagination();
 		}
 
