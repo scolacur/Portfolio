@@ -351,9 +351,19 @@ to   { opacity: 1; }
 	#left-col, #left-col p, #left-col .card-container {
 		display: none !important;
 	}
-	#contact #resume-container #image-wrapper img {
-		margin-left: -75%;
-		width: 90vw;
+	#contact #resume-container #image-wrapper {
+		img {
+			margin-left: -75%;
+			width: 90vw;
+		}
+		button {
+			position: absolute;
+			top: -200px;
+			left: -50%;
+			height: 6em;
+			width: 200%;
+			margin: auto;
+		}
 	}
 }
 
