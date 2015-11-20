@@ -74,7 +74,7 @@ $pastelPink: #FF8EB2;
 		// margin: auto;
 		perspective: 1100px;
 		animation-delay: .5s;
-		
+
 	}
 
 	#carousel {
@@ -217,7 +217,7 @@ $pastelPink: #FF8EB2;
 		#header {
 			min-height: 72vh;
 			h1 {
-				text-align: left;
+				text-align: left !important;
 				margin-bottom: 0px;
 			}
 			#graphic {
@@ -229,17 +229,14 @@ $pastelPink: #FF8EB2;
 					display: none;
 				}
 				#static-bars {
-					// width: 100%;
 					margin-left: -15%;
 					margin-right: -15%;
-					// margin-bottom: 70px;
-					// margin-top: 20px;
 					display: block;
 					figure {
+						text-align: left;
 						margin: 0px;
 						font-size: 28px;
 						padding-left: 12%;
-						// padding: 10px;
 					}
 				}
 			}
@@ -247,6 +244,10 @@ $pastelPink: #FF8EB2;
 		#bottom-panel {
 			a {
 				font-size: 50px;
+			}
+			hr {
+				margin-top: 30px;
+				margin-bottom: 20px;
 			}
 			#projects-row {
 				flex-direction: column;
