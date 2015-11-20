@@ -22,34 +22,34 @@ app.config(function($stateProvider){
 	});
 });
 
-app.controller('homeCtrl', function(){
+app.controller('mainCtrl', function(){
 
+});
+
+app.controller('homeCtrl', function(){
 		var increment = 0;
 		var carousel = $('#carousel');
 		var current = '#fig-1';
 		var prev;
-		setInterval(function(){
-			if ($(window).width() > 768) {
-				increment++;
-				carousel.css({
-					'-webkit-transform': 'rotateX(' + (increment * -60) + 'deg)'
-				});
-				carousel.attr('data-state',(increment % 6) + 1);
+		var theWindow = $(window);
+		var interval;
 
-				prev = current;
-				current = '#fig-' + ((increment % 6) + 1);
+		if (theWindow.width() > 768) {
+			interval = setInterval(rotate,1500);
+		}
+		theWindow.resize(function() {
+			clearInterval(interval);
+			if (theWindow.width() > 768) {
+				$('html,body').scrollTop(0);
+				interval = setInterval(rotate,1500);
 			}
-		},1500);
+		});
 
-	// var circle1 = $('#circle-1');
-	// console.log('$circle-1', circle1);
-	// var circle2 = $('#circle-2');
-	// // var circle3 = $('#circle-3');
-	//
-	// circle1.click(function(){
-	// 	circle1.addClass('spin-clockwise');
-	// 	setTimeout(function(){
-	// 		circle2.addClass('spin-counterclockwise');
-	// 	},500);
-	// });
+		function rotate(){
+			increment++;
+			carousel.css({'-webkit-transform': 'rotateX(' + (increment * -60) + 'deg)'});
+			carousel.attr('data-state',(increment % 6) + 1);
+			prev = current;
+			current = '#fig-' + ((increment % 6) + 1);
+		}
 });
