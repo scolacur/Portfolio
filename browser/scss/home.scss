@@ -212,7 +212,14 @@ $pastelPink: #FF8EB2;
 	}
 }
 
+@media (max-width: 954px){
+	figure {
+		font-size: 1.8em !important;
+	}
+}
+
 @media (max-width: 768px){
+
 	#home {
 		#header {
 			min-height: 72vh;
