@@ -1,25 +1,19 @@
 var gulp = require('gulp'),
-	uglify = require('gulp-uglify'),
-	sass = require('gulp-sass'),
-	eslint = require('gulp-eslint'),
-	rename = require('gulp-rename'),
-	livereload = require('gulp-livereload'),
-	plumber = require('gulp-plumber'),
-	sourcemaps = require('gulp-sourcemaps'),
-	runSeq = require('run-sequence'),
-	concat = require('gulp-concat'),
-	babel = require('gulp-babel'),
 	autoprefixer = require('gulp-autoprefixer'),
+	babel = require('gulp-babel'),
+	concat = require('gulp-concat'),
+	eslint = require('gulp-eslint'),
+	livereload = require('gulp-livereload'),
 	notify = require('gulp-notify');
+	plumber = require('gulp-plumber'),
+	rename = require('gulp-rename'),
+	runSeq = require('run-sequence'),
+	sass = require('gulp-sass'),
+	sourcemaps = require('gulp-sourcemaps'),
+	uglify = require('gulp-uglify'),
+	minifyCSS = require('gulp-minify-css'),
+	ngAnnotate = require('gulp-ng-annotate');
 
-// function errorLog(error){
-// 	// notify('Gulp Error');
-// 	notify.onError(function(e){
-// 		console.log(e);
-// 	});
-// 	console.error.bind(error);
-// 	this.emit('end');
-// }
 
 /*Live reload task*/
 gulp.task('reload', function () {
@@ -28,6 +22,25 @@ gulp.task('reload', function () {
 
 gulp.task('reloadCSS', function () {
 	return gulp.src('./public/style.css').pipe(livereload());
+});
+
+gulp.task('lintJS', function () {
+	return gulp.src(['./browser/js/**/*.js', './server/**/*.js'])
+		.pipe(plumber({
+			errorHandler: notify.onError("Linting Failed. Check your Gulp process.")
+		}))
+		.pipe(eslint())
+		.pipe(eslint.format())
+		.pipe(eslint.failOnError());
+});
+
+gulp.task('buildJS', ['lintJS'], function () {
+	return gulp.src(['./browser/js/app.js', './browser/js/**/*.js'])
+		.pipe(sourcemaps.init())
+		.pipe(concat('main.js'))
+		.pipe(babel({presets: ['es2015']}))
+		.pipe(sourcemaps.write())
+		.pipe(gulp.dest('./public'));
 });
 
 gulp.task('buildCSS', function () {
@@ -42,25 +55,6 @@ gulp.task('buildCSS', function () {
 		.pipe(gulp.dest('./public'));
 });
 
-gulp.task('buildJS', ['lintJS'], function () {
-	return gulp.src(['./browser/js/app.js', './browser/js/**/*.js'])
-		.pipe(sourcemaps.init())
-		.pipe(concat('main.js'))
-		.pipe(babel({presets: ['es2015']}))
-		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('./public'));
-});
-
-gulp.task('lintJS', function () {
-	return gulp.src(['./browser/js/**/*.js', './server/**/*.js'])
-		.pipe(plumber({
-			errorHandler: notify.onError("Linting Failed. Check your Gulp process.")
-		}))
-		.pipe(eslint())
-		.pipe(eslint.format())
-		.pipe(eslint.failOnError());
-});
-
 /* Scripts task: Uglifies, */
 // gulp.task('uglify', function(){
 // 	gulp.src('browser/js/*.js')
@@ -68,9 +62,39 @@ gulp.task('lintJS', function () {
 // 	.pipe(gulp.dest('build/js'));
 // });
 
-gulp.task('build', function () {
-	runSeq(['buildJS', 'buildCSS']);
+/*Production Tasks
+=========================================*/
+
+gulp.task('buildCSSProduction', function () {
+    return gulp.src('./browser/scss/main.scss')
+        .pipe(sass())
+        .pipe(rename('style.css'))
+        .pipe(minifyCSS())
+        .pipe(gulp.dest('./public'));
 });
+
+gulp.task('buildJSProduction', function () {
+    return gulp.src(['./browser/js/app.js', './browser/js/**/*.js'])
+        .pipe(concat('main.js'))
+        .pipe(babel())
+        .pipe(ngAnnotate())
+        .pipe(uglify())
+        .pipe(gulp.dest('./public'));
+});
+
+//////////////////////////////////////////////////
+
+gulp.task('build', function () {
+    if (process.env.NODE_ENV === 'production') {
+        runSeq(['buildJSProduction', 'buildCSSProduction']);
+    } else {
+        runSeq(['buildJS', 'buildCSS']);
+    }
+});
+
+// gulp.task('build', function () {
+// 	runSeq(['buildJS', 'buildCSS']);
+// });
 
 //Default Task
 gulp.task('default', function(){
