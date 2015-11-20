@@ -1,6 +1,9 @@
 /*About Page
 ========================*/
 
+$header-height: 65px;
+$footer-height: 40px;
+
 /*Colors
 ========================*/
 $aqua: #7FFFD4;
@@ -16,10 +19,12 @@ $pastelPink: #FF8EB2;
 ========================*/
 
 #about {
-	height: 90vh;
+	// height: 70vh;
+	height: calc(100vh - $footer-height);
+
 	background-image: url("steve-pic-2.jpg");
 	background-repeat: no-repeat;
-	background-size: 110%;
+	background-size: cover;
 	background-position: 30%;
 
 	#about-me {

@@ -1,7 +1,7 @@
 @import "a-mixins";
 
 $header-height: 65px;
-
+$footer-height: 40px;
 
 /*Page Styles
 ========================*/
@@ -56,7 +56,7 @@ footer {
 	font-size: 16px;
 	width:100%;
 	background: linear-gradient(240deg, $aqua 40%, $pastelBlue 150%);
-	height:40px;
+	height:$footer-height;
 	position:fixed;
 	bottom:0;
 	left:0;

@@ -1,6 +1,9 @@
 /*Contact Page
 ========================*/
 
+$header-height: 65px;
+$footer-height: 40px;
+
 /*Colors
 ========================*/
 $lightBlue: #37BEFF;
@@ -12,17 +15,15 @@ $cream: #F5FFFA;
 ========================*/
 
 #contact {
-	// height: 100%;
 	background-image: url('bgnoise.jpg');
-	
-	// background-image: url('vaporwave-landscape.jpg');
-	// background-size: cover;
+	background-size: cover;
+	height: calc(100vh - $footer-height);
 
-	height: 90vh;
+	// background-image: url('vaporwave-landscape.jpg');
 	// background-image: url("steve-pic-2.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
-	background-position: 30%;
+	// background-repeat: no-repeat;
+	// background-size: 100%;
+	// background-position: 30%;
 
 	#resume-container {
 		display: none;

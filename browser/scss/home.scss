@@ -1,6 +1,9 @@
 /*Home Page
 ========================*/
 
+$header-height: 65px;
+$footer-height: 40px;
+
 /*Colors
 ========================*/
 $aqua: #7FFFD4;
@@ -17,7 +20,7 @@ $pastelPink: #FF8EB2;
 
 #home {
 	background-image: url('bgnoise.jpg');
-
+	height: calc(100vh - $footer-height);
 	// background-image: url('vaporwave-2.png');
 	#header {
 		width: 100%;
