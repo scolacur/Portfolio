@@ -8,8 +8,6 @@
 
 module.exports = {
     "SESSION_SECRET": process.env.SESSION_SECRET,
-	"MANDRILL": {
-	  "api": process.env.MANDRILL_API_KEY
-	}
+	"MANDRILL": process.env.MANDRILL_API_KEY
 };
     // "DATABASE_URI": process.env.MONGOLAB_URI,
