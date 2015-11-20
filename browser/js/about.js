@@ -148,13 +148,8 @@ function initializeSkillsCloud(){
 	}
 
 	theWindow.resize(function() {
-			console.log(theWindow);
-			var top  = window.pageYOffset || document.documentElement.scrollTop;
-			console.log("TOP: ",top);
-			console.log($('html,body').scrollTop());
 		if (theWindow.width() > 1074) {
 			$('html,body').scrollTop(0);
-			console.log('snapping back to top');
 			//start / restart mouseover listener if stopped
 			if (stopped) {
 				initializeSkillsCloud();
