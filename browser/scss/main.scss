@@ -1,3 +1,9 @@
+@import "a-mixins";
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+$header-height: 65px;
+
+
 /*Page Styles
 ========================*/
 * {
@@ -67,8 +73,7 @@ footer {
 	min-height:100vh;
 }
 
-
-#main {
+// #main{
 	// height: 30px;
 	// min-height: 70vh;
 	// background-color: yellow;
@@ -76,23 +81,16 @@ footer {
 	// padding-bottom: 40px;
 	// padding: 0px;
 	/* Bottom Padding must be >= height of the footer */
-}
+// }
 
 #main-header {
 	padding-left: 20px;
 	padding-right: 20px;
 	background: linear-gradient(10deg, $aqua 50%, $pastelBlue 150%);
-
-	// #main-logo {
-	// 	float: left;
-	// 	font-size: 30px;
-	// 	min-height: 60px;
-	// }
-	@import url(http://fonts.googleapis.com/css?family=Lobster);
 	#main-logo {
 		font-size: 36px;
 		float: left;
-		min-height: 60px;
+		min-height: $header-height;
 		text-align:center;
 		background-color: darken(dimgray, 30%);
 		color: transparent;
@@ -108,7 +106,7 @@ footer {
 
 	#links {
 		float: right;
-		min-height: 65px;
+		min-height: $header-height;
 
 		a {
 			display: inline-block;

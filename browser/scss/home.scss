@@ -16,6 +16,8 @@ $pastelPink: #FF8EB2;
 ========================*/
 
 #home {
+	background-image: url('bgnoise.jpg');
+
 	// background-image: url('vaporwave-2.png');
 	#header {
 		width: 100%;
@@ -71,6 +73,8 @@ $pastelPink: #FF8EB2;
 		// margin-left: 100px;
 		// margin: auto;
 		perspective: 1100px;
+		animation-delay: .5s;
+		
 	}
 
 	#carousel {
@@ -133,7 +137,8 @@ $pastelPink: #FF8EB2;
 			padding: 5px;
 			#project-1 {
 				background: url('cohearence.png');
-				background-size: contain;
+				background-size: cover;
+				background-position: left;
 			}
 			#project-2 {
 				background: url('spheres-center.png');
@@ -194,13 +199,15 @@ $pastelPink: #FF8EB2;
 		margin-bottom: 80px;
 
 		.left-col, #graphic {
+			text-align: center;
 			float: none !important;
 			display: block !important;
 			margin: auto;
 		}
 		#graphic {
 			margin-top: 70px;
-			width: 94%;
+			// width: 94%;
+			width: 40%;
 		}
 	}
 }
