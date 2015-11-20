@@ -16,10 +16,8 @@ app.controller('contactCtrl', function($scope, $http){
 	};
 	//
 	var resumeLabel = $('#resume');
-	console.log(resumeLabel);
 	var overlay = $('#overlay');
 	var resume = $('#resume-container');
-	console.log(overlay);
 
 	resumeLabel.click(function(){
 		overlay.css({'opacity': '.7', 'z-index': '1'});

@@ -1,4 +1,6 @@
-window.app = angular.module('portfolio', ['ui.router', 'ngAnimate']);
+// window.app = angular.module('portfolio', ['ui.router', 'ngAnimate']);
+window.app = angular.module('portfolio', ['ui.router']);
+
 
 app.config(function ($urlRouterProvider, $locationProvider, $urlMatcherFactoryProvider) {
 
