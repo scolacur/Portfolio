@@ -1,10 +1,9 @@
 app.controller('aboutCtrl', function($scope){
-	// angular.element(document).ready(function(){
-	var skillsCloud = $("#skills-cloud");
-	var width = skillsCloud.width();
-	var height = skillsCloud.height();
-	var svg = d3.select("#skills-cloud").append("svg");
+	var theWindow = $(window);
+	var force = d3.layout.force();
+	var stopped = true;
 
+	// angular.element(document).ready(function(){
 	$scope.skills = [
 		{name: "JavaScript", level: 3},
 		{name: "MongoDB", level: 3},
@@ -41,18 +40,12 @@ app.controller('aboutCtrl', function($scope){
 	$scope.skills.map(function(e,i){
 		e.color = $scope.colors[i%6];
 	});
+function initializeSkillsCloud(){
+	var skillsCloud = $("#skills-cloud");
+	var width = skillsCloud.width();
+	var height = skillsCloud.height();
+	var svg = d3.select("#skills-cloud").append("svg");
 
-	// angular.element(document).ready(function(){
-		// setTimeout(function(){
-		// var mobileSkills = $('#skill-list').children();
-		// // console.log(mobileSkills);
-		// mobileSkills.map(function(i){
-		// 	console.log(mobileSkills[i]);
-		// 	// mobileSkills[i].css({'background-color': $scope.colors[i % 6]});
-		// });
-		// }, 1000);
-	// });
-	// var mobileSkills = $('#skill-list')[0];
 
 	//create nodes
 	var nodes = d3.range($scope.skills.length).map(function(i) {
@@ -85,13 +78,14 @@ app.controller('aboutCtrl', function($scope){
 			"text-anchor": "middle",
 		});
 
-	var force = d3.layout.force()
-		.gravity(0.05)
+
+		force.gravity(0.05)
 		.charge(function(d, i) { return i ? 0 : -3000; })
 		.nodes(nodes)
 		.size([width-200, height-300]);
 
 	force.start();
+	stopped = false;
 
 	force.on("tick", function(e) {
 		var q = d3.geom.quadtree(nodes),
@@ -146,5 +140,27 @@ app.controller('aboutCtrl', function($scope){
 			return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
 		};
 	}
+}
 	// });
+
+	if (theWindow.width() > 1074) {
+		initializeSkillsCloud();
+	}
+
+	theWindow.resize(function() {
+			console.log(theWindow);
+			var top  = window.pageYOffset || document.documentElement.scrollTop;
+			console.log("TOP: ",top);
+			console.log($('html,body').scrollTop());
+		if (theWindow.width() > 1074) {
+			$('html,body').scrollTop(0);
+			console.log('snapping back to top');
+			//start / restart mouseover listener if stopped
+			if (stopped) {
+				initializeSkillsCloud();
+			}
+		} else {
+			force.stop();
+		}
+	});
 });
