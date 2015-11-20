@@ -222,8 +222,6 @@ app.controller('contactCtrl', function($scope, $http){
 			if (this.x > width ||this.x< 0){
 				this.velX *= -0.5;
 			}
-
 		}
 	}
-
 });

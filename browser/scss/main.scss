@@ -38,7 +38,7 @@ a {
 html,
 body {
 	padding:0;
-	height:100vh;
+	// height:100vh; //this screwed with the about page resizing, oddly
 	margin: 0;
 	overflow: hidden;
 }
@@ -156,6 +156,7 @@ footer {
 =============================*/
 @media (max-width: 768px){
 	body {
+		height: 100vh;
 		overflow: auto;
 	}
 	#links a {

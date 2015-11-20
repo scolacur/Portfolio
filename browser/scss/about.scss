@@ -19,7 +19,6 @@ $pastelPink: #FF8EB2;
 ========================*/
 
 #about {
-	// height: 70vh;
 	height: calc(100vh - $footer-height);
 
 	background-image: url("steve-pic-2.jpg");
@@ -29,8 +28,6 @@ $pastelPink: #FF8EB2;
 
 	#about-me {
 		float: left;
-		// border-right: solid dimgray 2px;
-		// margin-top: 40px;
 		width: 40%;
 		height: 100vh;
 		padding: 20px 40px;
@@ -61,12 +58,10 @@ $pastelPink: #FF8EB2;
 		h1 {
 			position: absolute;
 			right: 0;
-			// left: 3;
 			border-bottom: solid 2px rgb(50,50,50);
 			border-left: solid 2px rgb(50,50,50);
 			color: rgb(50,50,50);
 			padding: 20px;
-			// margin-top: 40px;
 			margin-right: 20px;
 			margin-left: 40px;
 			transition: all .5s ease;
@@ -95,6 +90,7 @@ $pastelPink: #FF8EB2;
 @media (max-width: 1074px){
 	body {
 		overflow: auto;
+		// overflow: scroll;
 	}
 	#about {
 		height: 55vh;
