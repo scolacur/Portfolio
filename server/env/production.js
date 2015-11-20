@@ -3,11 +3,9 @@
     production information in a repo. They should be set in your
     heroku (or whatever VPS used) configuration to be set in the
     applications environment, along with NODE_ENV=production
-
  */
 
 module.exports = {
-    "SESSION_SECRET": process.env.SESSION_SECRET,
+	"SESSION_SECRET": process.env.SESSION_SECRET,
 	"MANDRILL": process.env.MANDRILL_API_KEY
 };
-    // "DATABASE_URI": process.env.MONGOLAB_URI,
