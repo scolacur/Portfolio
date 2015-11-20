@@ -20,6 +20,6 @@ module.exports = function (app) {
    //  app.setValue('env', env);
     app.setValue('projectRoot', rootPath);
     app.setValue('indexHTMLPath', indexPath);
-    app.setValue('faviconPath', faviconPath);
+    // app.setValue('faviconPath', faviconPath);
     app.setValue('log', logMiddleware);
 };
