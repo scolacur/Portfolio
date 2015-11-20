@@ -42,7 +42,6 @@ app.controller('aboutCtrl', function($scope){
 		e.color = $scope.colors[i%6];
 	});
 
-	console.log($scope.skills);
 	// angular.element(document).ready(function(){
 		// setTimeout(function(){
 		// var mobileSkills = $('#skill-list').children();
