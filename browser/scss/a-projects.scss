@@ -1,6 +1,9 @@
 /*Projects Page
 ========================*/
 
+$header-height: 65px;
+$footer-height: 40px;
+
 /*Colors
 ========================*/
 $aqua: #7FFFD4;
@@ -15,10 +18,10 @@ $pastelPink: #FF8EB2;
 /*page styles
 =========================*/
 
-.skw-pages {
+#projects {
 	overflow: hidden;
 	position: relative;
-	height: 87vh;
+	height: calc(100vh - $footer-height);
 	background-image: url('bgnoise.jpg');
 }
 
