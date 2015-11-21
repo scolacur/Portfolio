@@ -222,11 +222,11 @@ $pastelPink: #FF8EB2;
 }
 
 @media (max-width: 768px){
-
 	#home {
 		#header {
 			min-height: 72vh;
 			h1 {
+				font-size: 30px;
 				text-align: left !important;
 				margin-bottom: 0px;
 			}
@@ -245,7 +245,7 @@ $pastelPink: #FF8EB2;
 					figure {
 						text-align: left;
 						margin: 0px;
-						font-size: 28px;
+						font-size: 24px !important;
 						padding-left: 12%;
 					}
 				}
@@ -276,7 +276,7 @@ $pastelPink: #FF8EB2;
 						}
 						h1 {
 							margin: 0px;
-							font-size:74px;
+							font-size:30px;
 						}
 						p {
 							display: none;
