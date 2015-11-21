@@ -31,10 +31,10 @@ router.post('/', function(req,res,next){
 	var async = false;
 	var ip_pool = "Main Pool";
 
-	mandrillClient.messages.send({"message": message, "async": async, "ip_pool": ip_pool}, function() {
-		res.status(200).json(true);
-	}, function(e) {
-		console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
+	// mandrillClient.messages.send({"message": message, "async": async, "ip_pool": ip_pool}, function() {
+		// res.status(200).json(true);
+	// }, function(e) {
+	// 	console.log('A mandrill error occurred: ' + e.name + ' - ' + e.message);
 		res.json(false);
-	});
+	// });
 });
