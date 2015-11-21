@@ -90,7 +90,7 @@ $pastelPink: #FF8EB2;
 @media (max-width: 1074px){
 	body {
 		// overflow: auto;
-		overflow: scroll;
+		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
 	}
 	#about {

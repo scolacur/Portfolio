@@ -158,12 +158,12 @@ footer {
 	body {
 		height: 100vh;
 		// overflow: auto;
-		overflow: scroll;
+		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
 	}
 	#links a {
 		width: 100%;
-		font-size: 26px !important;
+		font-size: 18px !important;
 		padding-top: 15px !important;
 		padding-bottom: 5px !important;
 		float: none !important;
