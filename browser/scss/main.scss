@@ -161,6 +161,9 @@ footer {
 		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
 	}
+	footer {
+		position: relative;
+	}
 	#links {
 		display: flex;
 		align-content: space-around;
