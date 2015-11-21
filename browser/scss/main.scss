@@ -161,6 +161,11 @@ footer {
 		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
 	}
+	#links {
+		display: flex;
+		align-content: space-around;
+		// align-items: center;
+	}
 	#links a {
 		width: 100%;
 		font-size: 18px !important;
