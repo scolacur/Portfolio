@@ -229,7 +229,6 @@ $scrollTime: 1s;
 }
 
 @media (max-width: 1068px) {
-
 	.skw-page__content {
 		.skw-page__half--left & {
 			padding-left: 12%;
@@ -253,8 +252,12 @@ $scrollTime: 1s;
 }
 
 @media (max-width: 768px) {
+	body {
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
 	.skw-pages {
-		overflow: visible;
+		// overflow: visible;
 		// height: 87vh;
 	}
 	.skw-page {
