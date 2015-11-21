@@ -20,8 +20,9 @@ URLs that bypass express.static because the given file does not exist.
 */
 
 app.use(function (req, res, next) {
-
-	if (path.extname(req.path).length > 0) {
+	var ext = path.extname(req.path);
+	console.log('EXT NAME:', ext);
+	if (ext.length > 0 && ext != ".pdf") {
 		res.status(404).end();
 	} else {
 		next(null);
