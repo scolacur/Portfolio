@@ -293,11 +293,11 @@ $cream: #F5FFFA;
 		}
 
 		#thank-you {
-			margin-top: 20px;
-			min-height: 50px;
+			margin-top: 150px;
+			min-height: 250px;
 			padding: 10px;
 			border-radius: 10px;
-			box-shadow: 0px 2px 10px black;
+			// box-shadow: 0px 2px 10px black;
 			animation: fadein 1s;
 
 			a, p {
@@ -305,6 +305,19 @@ $cream: #F5FFFA;
 			}
 			a {
 				font-weight: bold;
+			}
+
+			button {
+				border: solid dimgray 2px;
+				margin-top: 100px;
+				background-color: transparent;
+				border-radius: 10px;
+				width: 40%;
+				height: 40px;
+				transition: all 0.25s ease-in-out;
+				&:hover {
+					background-color: $cream;
+				}
 			}
 		}
 	}
@@ -329,7 +342,9 @@ to   { opacity: 1; }
 =============================*/
 @media (min-width: 769px) and (max-width: 1024px) {
 	body {
-		overflow: auto;
+		// overflow: auto;
+		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 	#main-content {
 		width: 90% !important;
@@ -346,7 +361,9 @@ to   { opacity: 1; }
 
 @media (max-width: 768px){
 	body {
-		overflow: auto;
+		// overflow: auto;
+		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 	#main-content {
 		width: 90% !important;

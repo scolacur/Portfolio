@@ -24,9 +24,9 @@
 				<i id="github" class="fa fa-github"></i>
 			</a>
 		</div>
-		<div id="form-container" class="animated slideInUp">
+		<div id="form-container" class="animated slideInUp" >
 			<h2>Let's chat.</h2>
-			<form name="contactForm" ng-submit="contactForm.$valid && sendMail(formData)">
+			<form name="contactForm" ng-submit="contactForm.$valid && sendMail(formData)" ng-hide="sent">
 				<input id="nameField" name="nameField" type="text" ng-model="formData.name" placeholder="Name" required/>
 				<input id="emailField" name="emailField" type="email" ng-model="formData.email" placeholder="Email" required/>
 				<textarea id="messageField" name="messageField" type="text" ng-model="formData.message" placeholder="Message" required/></textarea>
@@ -41,13 +41,14 @@
 					</div>
 				</div>
 			</form>
-		</div>
-		<div id="thank-you" ng-show="sent">
-			<p ng-if="success">Thanks for reaching out! I'll get back to you as soon as possible.</p>
-			<p ng-if="!success">Oops! Looks like there was a problem with the Mandrill API. <br>
-				Feel free to email me directly at
-				<a href="mailto:stephencolacurcio@gmail.com" target="_top">stephencolacurcio@gmail.com</a>
-			</p>
+			<div id="thank-you" ng-show="sent">
+				<p ng-if="success">Thanks for reaching out! I'll get back to you as soon as possible.</p>
+				<p ng-if="!success">Oops! Looks like there was a problem with the Mandrill API. <br>
+					Feel free to email me directly at
+					<a href="mailto:stephencolacurcio@gmail.com" target="_top">stephencolacurcio@gmail.com</a>
+				</p>
+				<button ng-click="sent=false">Back to Form</button>
+			</div>
 		</div>
 	</div>
 </div>

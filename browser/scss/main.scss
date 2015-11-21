@@ -157,7 +157,9 @@ footer {
 @media (max-width: 768px){
 	body {
 		height: 100vh;
-		overflow: auto;
+		// overflow: auto;
+		overflow: scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 	#links a {
 		width: 100%;
