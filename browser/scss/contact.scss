@@ -371,23 +371,32 @@ to   { opacity: 1; }
 	#left-col, #left-col p, #left-col .card-container {
 		display: none !important;
 	}
+
+	#contact #resume-container {
+		width: 100%;
+	}
+
 	#contact #resume-container #image-wrapper {
+		position: absolute;
+		top: -200px;
+		// top: 0;
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+
 		img {
-			margin-left: -75%;
-			width: 90vw;
+			// margin-left: -75%;
+			width: 90%;
 		}
 		#download-button {
+			// z-index: 999 !important;
 			position: absolute;
-			top: -200px;
-			// left: -50%;
+			margin-top: 480px;
+			top: 0;
 			left: 0;
-			margin-left: auto;
-			margin-right: auto;
-
-			// right: 0;
-			// height: 6em;
-			width: 100%;
-			// margin: auto;
+			width: 80%;
+			margin-left: 10%;
 			font-size: 24px;
 			padding-top: 1em;
 			padding-bottom: 1em;
