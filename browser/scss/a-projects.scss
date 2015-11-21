@@ -18,6 +18,9 @@ $pastelPink: #FF8EB2;
 /*page styles
 =========================*/
 
+projects-mobile {
+	// display: none;
+}
 #projects {
 	overflow: hidden;
 	position: relative;
@@ -28,6 +31,7 @@ $pastelPink: #FF8EB2;
 $skewDeg: 18deg;
 $magicVH: 32.4vh; // this number is magic and depends on skew angle
 $scrollTime: 1s;
+
 
 .skw-page {
 // position: absolute;
