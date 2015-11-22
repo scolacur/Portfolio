@@ -367,8 +367,10 @@ to   { opacity: 1; }
 @media (max-width: 768px){
 
 	#contact #main-content #form-container .button-holder {
+		&:hover {
+			background-color: $aqua;
+		}
 		.ease {
-			// height: 100px;
 			display: none;
 		}
 	}
