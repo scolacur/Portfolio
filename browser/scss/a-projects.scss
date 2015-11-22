@@ -268,16 +268,14 @@ $scrollTime: 1s;
 		overflow-y: scroll;
 		-webkit-overflow-scrolling: touch;
 	}
-	.skw-pages {
-		// overflow: visible;
-		// height: 87vh;
-	}
-	.skw-page {
-		display: none;
-	}
+
+	// .skw-page {
+	// 	display: none;
+	// }
 
 	#projects {
-		overflow-y: visible;
+		display: none;
+		// overflow-y: visible;
 		// -webkit-overflow-scrolling: touch;
 	}
 	projects-mobile {
