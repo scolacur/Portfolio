@@ -365,6 +365,13 @@ to   { opacity: 1; }
 }
 
 @media (max-width: 768px){
+
+	#contact #main-content #form-container .button-holder {
+		.ease {
+			// height: 100px;
+			display: none;
+		}
+	}
 	body {
 		// overflow: auto;
 		overflow-y: scroll;
