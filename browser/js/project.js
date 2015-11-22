@@ -1,7 +1,8 @@
 app.controller('projectCtrl', function($scope){
 	var theWindow = $(window);
-
+	var skewMode = false;
 	function initializeSkew(){
+		skewMode = true;
 		$(document).ready(function() {
 
 			var curPage = 1;
@@ -60,4 +61,14 @@ app.controller('projectCtrl', function($scope){
 	if (theWindow.width() > 768) {
 		initializeSkew();
 	}
+
+	theWindow.resize(function() {
+		if (theWindow.width() > 768) {
+			// $('html,body').scrollTop(0);
+			//start / restart mouseover listener if stopped
+			if (!skewMode) {
+				initializeSkew();
+			}
+		}
+	});
 });
