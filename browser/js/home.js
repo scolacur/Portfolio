@@ -22,10 +22,6 @@ app.config(function($stateProvider){
 	});
 });
 
-app.controller('mainCtrl', function(){
-
-});
-
 app.controller('homeCtrl', function(){
 		var increment = 0;
 		var carousel = $('#carousel');

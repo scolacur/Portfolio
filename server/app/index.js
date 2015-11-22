@@ -19,16 +19,15 @@ This allows for proper 404s instead of the wildcard '/*' catching
 URLs that bypass express.static because the given file does not exist.
 */
 
-app.use(function (req, res, next) {
-	var ext = path.extname(req.path);
-	console.log('EXT NAME:', ext);
-	if (ext.length > 0 && ext != ".pdf") {
-		res.status(404).end();
-	} else {
-		next(null);
-	}
-
-});
+// app.use(function (req, res, next) {
+// 	var ext = path.extname(req.path);
+// 	console.log('EXT NAME:', ext);
+// 	if (ext.length > 0) {
+// 		res.status(404).end();
+// 	} else {
+// 		next(null);
+// 	}
+// });
 
 app.get('/*', function (req, res) {
 	res.sendFile(app.get('indexHTMLPath'));
