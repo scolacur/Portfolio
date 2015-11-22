@@ -277,8 +277,8 @@ $scrollTime: 1s;
 	}
 
 	#projects {
-		overflow-y: scroll;
-		-webkit-overflow-scrolling: touch;
+		overflow-y: visible;
+		// -webkit-overflow-scrolling: touch;
 	}
 	projects-mobile {
 		// overflow-y: scroll;
