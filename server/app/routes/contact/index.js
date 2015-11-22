@@ -1,5 +1,4 @@
 var router = require('express').Router();
-
 var keys = require('../../../env');
 var mandrill = require('mandrill-api/mandrill');
 var mandrillClient = new mandrill.Mandrill(keys.MANDRILL);

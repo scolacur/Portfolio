@@ -2,4 +2,7 @@ node_modules
 bower_components
 .sass-cache
 .DS_Store
+<<<<<<< HEAD
 development.js
+=======
+>>>>>>> 2800d1d4678d54b148ffb8aec0ba369345feb5f2
