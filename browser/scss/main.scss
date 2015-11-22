@@ -169,14 +169,20 @@ footer {
 		align-content: space-around;
 		min-height: 40px !important;
 		// align-items: center;
+		// perspective: 200px;
 	}
 	#links a {
-		height: 60px !important;
+		// -webkit-transform: rotateX(45deg);
 		width: 100%;
 		font-size: 18px !important;
-		padding-top: 20px !important;
-		padding-bottom:18px !important;
 		float: none !important;
+		// background-color: $pastelPink;
+		// border: solid dimgray 2px;
+
+		// height: 60px !important;
+		// padding-top: 20px !important;
+		// padding-bottom:18px !important;
+
 	}
 	#links, #main-logo {
 		width: 100%;
