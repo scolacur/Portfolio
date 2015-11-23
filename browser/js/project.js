@@ -6,19 +6,14 @@ app.controller('projectCtrl', function($scope){
 		skewMode = true;
 		$(document).ready(function() {
 
-			// var curPage = 1;
-
 			var numOfPages = $(".skw-page").length;
 			var animTime = 1000;
 			var scrolling = false;
 			var pgPrefix = ".skw-page-";
+			// var progPrefix = "#p";
 
-			console.log(window.location.pathname);
 			var curPage = parseInt(window.location.href.split("#p")[1]) + 1 || 1;
 
-			// var progPrefix = "#p";
-			//
-			// var curPage = parseInt($stateParams.page);
 			if (curPage !== 1){
 				for (var i = 1; i<curPage; i++){
 					$(pgPrefix + i).removeClass("active").addClass("inactive");
