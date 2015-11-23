@@ -45,7 +45,7 @@ $pastelPink: #FF8EB2;
 			min-width: 30%;
 			margin-top: 30px;
 			margin-right: 2%;
-
+			// perspective: 300;
 		}
 		#static-bars {
 			display: none;
@@ -77,7 +77,7 @@ $pastelPink: #FF8EB2;
 		// margin: auto;
 		perspective: 1100px;
 		animation-delay: .5s;
-
+		// transform: rotateY(-45deg);
 	}
 
 	#carousel {
@@ -87,6 +87,7 @@ $pastelPink: #FF8EB2;
 		z-index: 100;
 		transform-style: preserve-3d;
 		transition: all 1s;
+
 	}
 
 	#carousel figure {

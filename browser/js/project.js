@@ -1,7 +1,7 @@
 app.controller('projectCtrl', function($scope){
 	var theWindow = $(window);
 	var skewMode = false;
-
+	var curPage;
 	function initializeSkew(){
 		skewMode = true;
 		$(document).ready(function() {
@@ -12,16 +12,19 @@ app.controller('projectCtrl', function($scope){
 			var pgPrefix = ".skw-page-";
 			// var progPrefix = "#p";
 
-			var curPage = parseInt(window.location.href.split("#p")[1]) + 1 || 1;
+			curPage = parseInt(window.location.href.split("#p")[1]) + 1 || 1;
 
-			if (curPage !== 1){
-				for (var i = 1; i<curPage; i++){
-					$(pgPrefix + i).removeClass("active").addClass("inactive");
+			for (var i = 1; i <= numOfPages; i++){
+				if (i < curPage) {
+					$(pgPrefix + i).addClass("active").addClass("inactive");
+				} else if (i === curPage){
+					$(pgPrefix + i).addClass("active").removeClass("inactive");
+				} else {
+					$(pgPrefix + i).removeClass("active").removeClass("inactive");
 				}
-				$(pgPrefix + curPage).removeClass("inactive").addClass("active");
 			}
 
-			function pagination() {
+			function pagination(){
 				scrolling = true;
 
 				$(pgPrefix + curPage).removeClass("inactive").addClass("active");
@@ -47,6 +50,8 @@ app.controller('projectCtrl', function($scope){
 				pagination();
 			}
 
+			$(document).off(); //reset event listeners
+
 			$(document).on("mousewheel DOMMouseScroll", function(e) {
 				if (scrolling) return;
 				if (e.originalEvent.wheelDelta > 0  || e.originalEvent.detail < 0) {
@@ -68,6 +73,7 @@ app.controller('projectCtrl', function($scope){
 	}
 
 	if (theWindow.width() > 768) {
+		console.log('INITIALIZING SKEW');
 		initializeSkew();
 	}
 
