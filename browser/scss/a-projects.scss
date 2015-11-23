@@ -190,6 +190,8 @@ $scrollTime: 1s;
 	&-1 {
 		.skw-page__half--left .skw-page__content {
 			background-image: url('steve-working.jpg');
+			// background-position: 150px -100px;
+			background-position: 80px -100px;
 		}
 		.skw-page__half--right .skw-page__content {
 			background-image: url(bgnoise.jpg);
@@ -259,6 +261,11 @@ $scrollTime: 1s;
 		}
 		#p1-content #p1-heading {
 			margin-top: 60%;
+		}
+		&-1 {
+			.skw-page__half--left .skw-page__content {
+				background-position: 20px -100px;
+			}
 		}
 	}
 }
