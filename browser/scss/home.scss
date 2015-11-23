@@ -152,8 +152,8 @@ $pastelPink: #FF8EB2;
 				background: url('gimme.png');
 				background-size: cover;
 				// background-position: center;
-
 			}
+
 			li {
 				border-radius: 10px;
 				height: 223px;
@@ -222,7 +222,10 @@ $pastelPink: #FF8EB2;
 }
 
 @media (max-width: 768px){
+
+
 	#home {
+
 		#header {
 			min-height: 400px;
 			padding: 0px;

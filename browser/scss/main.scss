@@ -83,7 +83,6 @@ footer {
 // }
 
 #main-header {
-	// z-index: 999;
 	padding-left: 20px;
 	padding-right: 20px;
 	background: linear-gradient(10deg, $aqua 50%, $pastelBlue 150%);
@@ -104,17 +103,46 @@ footer {
 		}
 	}
 
+	// #perspective-container {
+	// 	position: absolute;
+	// 	top:0;
+	// 	right: 0;
+	// 	perspective: 100;
+	// 	// z-index: -1;
+	//
+	// }
+	// #perspective {
+	// 	// position: absolute;
+	// 	background-color: $pastelPink;
+	// 	top: 0;
+	// 	right: 0;
+	// 	width: 320px;
+	// 	opacity: .8;
+	// 	z-index: -1;
+	// 	height: 40px;
+	// 	transform: rotateX(45deg);
+	// }
+
 	#links {
+		z-index: 2;
 		float: right;
 		min-height: $header-height;
 
 		a {
+			z-index: 3;
 			display: inline-block;
 			height: 65px;
 			color: dimgray;
 			text-decoration: none;
 			font-size: 16px;
 			margin-left: -4px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+
+			&:hover {
+				background-color: dimgray;
+				color: #fdfdfd;
+			}
 		}
 	}
 
@@ -125,16 +153,6 @@ footer {
 		text-align: center;
 	}
 
-	#links a {
-		// height: 20px;
-		padding-top: 20px;
-		padding-bottom: 20px;
-
-		&:hover {
-			background-color: dimgray;
-			color: #fdfdfd;
-		}
-	}
 	#main-logo {
 		padding-top: 10px;
 		padding-bottom: 10px;

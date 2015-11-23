@@ -21,7 +21,6 @@ URLs that bypass express.static because the given file does not exist.
 
 app.use(function (req, res, next) {
 	var ext = path.extname(req.path);
-	console.log('EXT NAME:', ext);
 	if (ext.length > 0) {
 		res.status(404).end();
 	} else {
