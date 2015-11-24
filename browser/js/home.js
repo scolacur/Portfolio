@@ -30,6 +30,7 @@ app.controller('homeCtrl', function(){
 		var theWindow = $(window);
 		var interval;
 		var bars = $('#static-bars > li');
+		var header = $('.left-col');
 
 		if (theWindow.width() > 768) {
 			interval = setInterval(rotate,1500);
@@ -39,6 +40,7 @@ app.controller('homeCtrl', function(){
 				speed = (index + 1) * 0.3;
 				$(this).css({'animation':'slideInLeft ' + speed + 's'});
 			});
+			header.removeClass("animated").removeClass('flipInX');
 		}
 
 		theWindow.resize(function() {
