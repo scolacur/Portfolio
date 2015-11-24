@@ -29,10 +29,18 @@ app.controller('homeCtrl', function(){
 		var prev;
 		var theWindow = $(window);
 		var interval;
+		var bars = $('#static-bars > li');
 
 		if (theWindow.width() > 768) {
 			interval = setInterval(rotate,1500);
+		} else {
+			var speed;
+			bars.each(function(index){
+				speed = (index + 1) * 0.3;
+				$(this).css({'animation':'slideInLeft ' + speed + 's'});
+			});
 		}
+
 		theWindow.resize(function() {
 			clearInterval(interval);
 			if (theWindow.width() > 768) {

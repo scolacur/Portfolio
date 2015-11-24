@@ -20,8 +20,17 @@ $pastelPink: #FF8EB2;
 
 #home {
 	background-image: url('bgnoise.jpg');
+	// background-image: url('blue-pink-gradient');
+	// background-size: cover;
+	// background: linear-gradient(135deg, $pastelPink -40%, $cyan 50%);
+
 	height: calc(100vh - $footer-height);
-	// background-image: url('vaporwave-2.png');
+	// height: calc(100vh - 40px);
+
+	// background-image: url('vice-city.gif');
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: bottom;
 	#header {
 		width: 100%;
 		height: 33vh;
@@ -224,7 +233,6 @@ $pastelPink: #FF8EB2;
 
 @media (max-width: 768px){
 
-
 	#home {
 
 		#header {
@@ -232,7 +240,7 @@ $pastelPink: #FF8EB2;
 			padding: 0px;
 			.left-col {
 				font-size: 30px;
-				text-align: left;
+				// text-align: left;
 				margin: 20px 20px;
 			}
 			#static-bars {
@@ -248,7 +256,7 @@ $pastelPink: #FF8EB2;
 					// padding-left: 7%;
 					// padding-top: 10px;
 					// padding-bottom: 10px;
-
+					// animation: slideInLeft random(20) + s;
 				}
 			}
 			#graphic {
