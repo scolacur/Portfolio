@@ -234,14 +234,14 @@ $pastelPink: #FF8EB2;
 @media (max-width: 768px){
 
 	#home {
-
 		#header {
 			min-height: 400px;
 			padding: 0px;
+
 			.left-col {
 				font-size: 30px;
-				// text-align: left;
 				margin: 20px 20px;
+				animation: none;
 			}
 			#static-bars {
 				padding: 0px;
