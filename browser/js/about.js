@@ -40,6 +40,7 @@ app.controller('aboutCtrl', function($scope){
 	$scope.skills.map(function(e,i){
 		e.color = $scope.colors[i%6];
 	});
+
 function initializeSkillsCloud(){
 	var skillsCloud = $("#skills-cloud");
 	var width = skillsCloud.width();
@@ -79,10 +80,17 @@ function initializeSkillsCloud(){
 		});
 
 
-		force.gravity(0.05)
-		.charge(function(d, i) { return i ? 0 : -3000; })
-		.nodes(nodes)
-		.size([width-200, height-300]);
+	force.gravity(0.05)
+	.charge(function(d, i) { return i ? 0 : -3000; })
+	.nodes(nodes);
+
+
+	if (navigator.userAgent.split("Chrome").length < 2) {
+		force.size([width-100, height+600]); //safari
+	} else {
+		force.size([width-200, height-300]); //chrome
+	}
+
 
 	force.start();
 	stopped = false;
@@ -116,6 +124,7 @@ function initializeSkillsCloud(){
 	root.px = 1;
 	root.py = 1;
 
+
 	function collide(node) {
 		var r = node.radius + 16,
 			nx1 = node.x - r,
@@ -143,12 +152,26 @@ function initializeSkillsCloud(){
 }
 	// });
 
-	if (theWindow.width() > 1074) {
+	var firefox;
+	if (navigator.userAgent.split("Safari").length < 2 && navigator.userAgent.split("Chrome").length < 2){
+		firefox = true;
+	}
+
+	if (firefox){
+		$('#skills-cloud').css({'display':'none'});
+		$('#skills-mobile').css({'display': 'block', 'margin-top': '24px' ,'margin-bottom': '44px','height': '700px'});
+
+		setTimeout(function(){
+			$('.skill-circle').css({'padding': '1px','padding-right': '32%', 'font-family': 'Oxygen', 'font-size': '19px', 'font-weight':'300', 'float':'right'});
+		},500);
+	}
+
+	if (theWindow.width() > 1074 && !firefox) {
 		initializeSkillsCloud();
 	}
 
 	theWindow.resize(function() {
-		if (theWindow.width() > 1074) {
+		if (theWindow.width() > 1074 && !firefox) {
 			$('html,body').scrollTop(0);
 			//start / restart mouseover listener if stopped
 			if (stopped) {
