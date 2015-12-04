@@ -12,8 +12,7 @@ app.controller('projectCtrl', function($scope){
 			var pgPrefix = ".skw-page-";
 			// var progPrefix = "#p";
 
-			// curPage = parseInt(window.location.href.split("#p")[1]) + 1 || 1;
-			curPage = 1;
+			curPage = parseInt(window.location.href.split("#p")[1]) + 1 || 1;
 
 			for (var i = 1; i <= numOfPages; i++){
 				if (i < curPage) {
