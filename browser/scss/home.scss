@@ -170,22 +170,23 @@ $darkGray: rgb(45,45,45);
 
 	#projects-header {
 		font-size: 36px;
-		// display: block;
 		margin: 15px 0px;
-		// margin-top: 20px;
 		color: rgb(230,230,230);
-		// height: 40px;
-		// border: solid white 1px;
 	}
+
 	#bottom-panel {
 		width: 85%;
 		margin: auto;
+
+		hr {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
 
 		#projects-row:first-child {
 			margin-left: 50px;
 		}
 		#projects-row {
-			// border: solid dimgray 2px;
 			border-radius: 10px;
 			height: 100%;
 			font-size: 0;
@@ -194,6 +195,7 @@ $darkGray: rgb(45,45,45);
 			flex-direction: row;
 			justify-content: space-between;
 			padding: 5px;
+			
 			#project-1 {
 				background: url('cohearence.png');
 				background-size: cover;
