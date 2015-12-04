@@ -49,11 +49,45 @@ $darkGray: rgb(45,45,45);
 		h1 {
 			color: rgb(230,230,230);
 			font-family: 'Lobster';
+			// font-family: 'Lato'
 			text-align: left;
 			font-size: 4vw;
 			margin-left: 0px;
 			// font-weight: 400;
 			// margin-bottom: 40px;
+		}
+		/*Fancy Underline*/
+		h1 {
+			overflow: hidden;
+			position: relative;
+			vertical-align: bottom;
+
+			&:after {
+				background: none center 1.20em / 100% 3px no-repeat;
+				// background: linear-gradient(90deg, $pastelPurple 15%, $pastelRed 35%, $aqua 85%) center 1.20em / 100% 3px no-repeat;
+				animation: underline-gradient 6s linear infinite;
+
+				content: "";
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 400%;
+				will-change: transform;
+				z-index: -1;
+			}
+			//
+			&:hover:after {
+				animation: underline-gradient 6s linear infinite;
+				background-image: linear-gradient(
+				90deg, $pastelPurple 15%, $pastelRed 35%, $aqua 55%, $pastelPurple 85%
+				);
+				}
+		}
+
+		@keyframes underline-gradient {
+			0%{transform: translate3d(0%, 0%, 0);}
+			100%{transform: translate3d(-75%, 0%, 0);}
 		}
 		.left-col {
 			min-width: 40%;
@@ -253,6 +287,7 @@ $darkGray: rgb(45,45,45);
 			.left-col {
 				font-size: 42px;
 				margin: 20px 20px 30px 20px;
+
 				// animation: none;
 			}
 			#static-bars {
