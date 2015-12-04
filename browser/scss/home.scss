@@ -15,11 +15,18 @@ $pastelPurple: #C688E8;
 $pastelRed: #FF807D;
 $pastelPink: #FF8EB2;
 
+/*Fonts
+========================*/
+@font-face {
+	font-family: bebas;
+	src: url('/bebas/bebasNeue Bold.otf');
+}
+
 /*Page Styles
 ========================*/
 
 #home {
-	background-image: url('bgnoise.jpg');
+	// background-image: url('bgnoise.jpg');
 	// background-image: url('blue-pink-gradient');
 	// background-size: cover;
 	// background: linear-gradient(135deg, $pastelPink -40%, $cyan 50%);
@@ -38,8 +45,10 @@ $pastelPink: #FF8EB2;
 		margin: auto;
 		margin-bottom: 5%;
 		h1 {
+			color: rgb(230,230,230);
+			font-family: 'Lobster';
 			text-align: left;
-			font-size: 48px;
+			font-size: 4vw;
 			margin-left: 0px;
 			// font-weight: 400;
 			// margin-bottom: 40px;
@@ -51,8 +60,8 @@ $pastelPink: #FF8EB2;
 
 		#graphic {
 			float: right;
-			min-width: 30%;
-			margin-top: 30px;
+			min-width: 25%;
+			margin-top: 47px;
 			margin-right: 2%;
 			// perspective: 300;
 		}
@@ -63,8 +72,8 @@ $pastelPink: #FF8EB2;
 
 
 	#carousel-wrapper, #carousel figure {
-		height: 70px;
-		line-height: 70px;
+		height: 50px;
+		line-height: 50px;
 	}
 
 	#carousel figure:nth-of-type(1) { transform: rotateX(0deg) translateZ(60px); }
@@ -104,7 +113,7 @@ $pastelPink: #FF8EB2;
 		position: absolute;
 		width: 100%;
 		margin: 0px;
-		font-size: 36px;
+		font-size: 26px;
 		color: $cream;
 		text-align: center;
 		opacity: .2;
@@ -121,7 +130,7 @@ $pastelPink: #FF8EB2;
 
 	hr {
 		// margin-top: 100px;
-		border-width: 3px;
+		// border-width: 3px;
 	}
 
 	#projects-header {
@@ -220,7 +229,7 @@ $pastelPink: #FF8EB2;
 		#graphic {
 			margin-top: 70px;
 			// width: 94%;
-			width: 40%;
+			width: 300px;
 		}
 	}
 }
@@ -239,8 +248,8 @@ $pastelPink: #FF8EB2;
 			padding: 0px;
 
 			.left-col {
-				font-size: 30px;
-				margin: 20px 20px;
+				font-size: 42px;
+				margin: 30px 20px;
 				// animation: none;
 			}
 			#static-bars {
@@ -253,6 +262,7 @@ $pastelPink: #FF8EB2;
 					margin: 0px;
 					font-size: 24px;
 					padding: 15px 20px;
+					color: dimgray;
 					// padding-left: 7%;
 					// padding-top: 10px;
 					// padding-bottom: 10px;

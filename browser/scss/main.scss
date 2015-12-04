@@ -26,7 +26,10 @@ $pastelPink: #FF8EB2;
 h1, h2, h3, p, a, li, footer, figure, input, textarea, text, button {
 	font-family: 'Oxygen', sans-serif;
 	font-weight: 300;
-	color: dimgray;
+	// color: dimgray;
+	color: rgb(200,200,200);
+	// color: rgb(230,230,230);
+
 }
 
 a {
@@ -44,8 +47,9 @@ body {
 }
 
 body {
-	background-image: url('bgnoise.jpg');
-	background-size: contain;
+	background-color: rgb(45,45,45);
+	// background-image: url('bgnoise.jpg');
+	// background-size: contain;
 	// background-image: url('vaporwave-landscape.jpg');
 	// background-image: url('vaporwave-2.png');
 	// background: linear-gradient(rgb(50,50,50), dimgray);
@@ -55,15 +59,23 @@ footer {
 	text-align: center;
 	font-size: 16px;
 	width:100%;
-	background: linear-gradient(240deg, $aqua 40%, $pastelBlue 150%);
+	// background: linear-gradient(240deg, $aqua 40%, $pastelBlue 150%);
 	height:$footer-height;
 	position:fixed;
 	bottom:0;
 	left:0;
 	padding-top: 10px;
+	// color: white;
+	color: rgb(230,230,230);
+	color: $aqua;
 
 	a {
+		color: $aqua;
 		text-decoration: none;
+		transition: all 0.25s ease-in-out;
+		&:hover {
+			color: rgb(230,230,230);
+		}
 	}
 }
 
@@ -85,7 +97,7 @@ footer {
 #main-header {
 	padding-left: 20px;
 	padding-right: 20px;
-	background: linear-gradient(10deg, $aqua 50%, $pastelBlue 150%);
+	// background: linear-gradient(10deg, $aqua 50%, $pastelBlue 150%);
 	#main-logo {
 		font-size: 36px;
 		float: left;
@@ -132,16 +144,19 @@ footer {
 			z-index: 3;
 			display: inline-block;
 			height: 65px;
-			color: dimgray;
+			color: lightgray;
 			text-decoration: none;
 			font-size: 16px;
 			margin-left: -4px;
 			padding-top: 20px;
 			padding-bottom: 20px;
-
+			border: solid transparent 1px;
+			border-radius: 50px;
 			&:hover {
-				background-color: dimgray;
-				color: #fdfdfd;
+				// background-color: dimgray;
+				color: $aqua;
+				// background-color: $aqua;
+				border: solid 1px $aqua;
 			}
 		}
 	}
