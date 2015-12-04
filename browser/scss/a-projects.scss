@@ -14,6 +14,8 @@ $pastelOrange: lightsalmon;
 $pastelPurple: #C688E8;
 $pastelRed: #FF807D;
 $pastelPink: #FF8EB2;
+$darkGray: rgb(45,45,45);
+
 
 /*page styles
 =========================*/
@@ -168,6 +170,11 @@ $scrollTime: 1s;
 		font-size: 30px;
 		a{
 			font-weight: bold;
+			transition: all 0.25s ease-in-out;
+
+			&:hover {
+				color: $aqua;
+			}
 		}
 	}
 
@@ -194,7 +201,7 @@ $scrollTime: 1s;
 		.skw-page__half--left .skw-page__content {
 			background-image: url('steve-working.jpg');
 			// background-position: 150px -100px;
-			background-position: 80px -100px;
+			background-position: 80px -60px;
 		}
 		.skw-page__half--right .skw-page__content {
 			// background-image: url(bgnoise.jpg);
@@ -276,7 +283,7 @@ $scrollTime: 1s;
 		}
 		&-1 {
 			.skw-page__half--left .skw-page__content {
-				background-position: 20px -100px;
+				background-position: 20px -60px;
 			}
 		}
 	}
@@ -303,6 +310,11 @@ $scrollTime: 1s;
 		// height: 100%;
 		display: block;
 
+		h1,h3,h2,li,ul{
+			color: rgb(230,230,230);
+		}
+
+
 		h2, h3, a, li {
 			font-weight: bold;
 		}
@@ -313,6 +325,9 @@ $scrollTime: 1s;
 
 		img {
 			width: 100%;
+		}
+		a {
+			color: $darkGray;
 		}
 
 		h1 {
@@ -346,7 +361,7 @@ $scrollTime: 1s;
 			font-size: 16px;
 			display: inline-block;
 			list-style-type: none;
-			border: solid dimgray 2px;
+			border: solid rgb(230,230,230) 2px;
 			border-radius: 10px;
 			padding: 10px;
 			margin-bottom: 10px;
@@ -354,7 +369,7 @@ $scrollTime: 1s;
 
 		hr {
 			margin: 40px 50px 40px 50px;
-			border-width: 3px;
+			border-width: 1px;
 		}
 
 		#p1 {
@@ -368,8 +383,7 @@ $scrollTime: 1s;
 		}
 
 		#bottom-divider {
-			margin: 40px 50px 20px 50px;
-			border-width: 3px;
+			margin: 40px 50px 40px 50px;
 		}
 	}
 }

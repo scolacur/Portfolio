@@ -22,7 +22,9 @@ app.config(function($stateProvider){
 	});
 });
 
-app.controller('homeCtrl', function(){
+app.controller('homeCtrl', function($scope, $state){
+		$scope.$state = $state;
+		console.log($scope.state);
 		var increment = 0;
 		var carousel = $('#carousel');
 		var current = '#fig-1';

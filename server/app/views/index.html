@@ -20,10 +20,10 @@
 		<script src="/main.js"></script>
 	</head>
 
-	<body ng-app="portfolio">
+	<body ng-app="portfolio" ng-controller="homeCtrl">
 		<div id="wrapper">
 			<header id="main-header" class="group">
-				<!-- <a ui-sref="home" id="main-logo">Steve Colacurcio</a> -->
+				<a ng-show="!$state.includes('home');" ui-sref="home" id="main-logo">Steve Colacurcio</a>
 				<!-- <div id="perspective-container">
 					<div id="perspective"></div>
 				</div> -->

@@ -10,6 +10,8 @@ $lightBlue: #37BEFF;
 $aqua: #7FFFD4;
 $cyan: #E0FFFF;
 $cream: #F5FFFA;
+$darkGray: rgb(45,45,45);
+
 
 /*Page Styles
 ========================*/
@@ -180,7 +182,7 @@ $cream: #F5FFFA;
 			box-shadow: 0px 2px 10px black;
 
 			h2 {
-				color: dimgray;
+				color: rgb(230,230,230);
 				margin-top: 10px;
 				margin-bottom: 30px;
 			}
@@ -195,11 +197,14 @@ $cream: #F5FFFA;
 				padding-left: 50px;
 				font-size: 14px;
 				font-weight: 400;
-				// background-color: #fbfbfb;
+				border: solid white 1px;
+				border: none;
 				background-color: rgb(30,30,30);
 				&:focus {
 					outline: none;
-					border: solid 2px rgb(230,230,230);
+					// border: solid 1px rgb(230,230,230);
+					border: solid 1px $aqua;
+
 				}
 			}
 
@@ -228,17 +233,20 @@ $cream: #F5FFFA;
 			#slide-button{
 				float:left;
 				width: 100%;
-				border: dimgray solid 1px;
+				// border: dimgray solid 1px;
+				border: none;
 				cursor:pointer;
 				// background-color: #fbfbfb;
-				background-color: rgb(30,30,30);
+				// background-color: rgb(30,30,30);
+				background-color: rgba(0,0,0,0);
+
 				font-size:20px;
 				padding-top:0px;
 				padding-bottom:0px;
-				transition: all 0.3s;
+				transition: all 0.3s ease-in-out;
 
 				p {
-					color:dimgray;
+					color: rgb(230,230,230);
 					margin-top: 22px;
 					margin-bottom: 22px;
 					padding: 0;
@@ -256,28 +264,39 @@ $cream: #F5FFFA;
 				}
 
 				&:hover{
-					background-color: rgba(0,0,0,0);
-					color: #fbfbfb;
+					background-color: rgb(30,30,30);
+
+					// color: #fbfbfb;
+					border: solid $aqua 1px;
+					p {
+						color: $aqua;
+					}
 				}
 
 				&:focus {
-					border: dimgray solid 2px;
+					border: $aqua solid 1px;
 					outline: none;
 				}
 			}
 
-			.ease {
-				width: 0px;
-				height: 72px;
-				background-color: $aqua;
-				transition: .3s ease;
-				border: dimgray solid 2px;
-			}
-
-			.button-holder:hover .ease{
-			  width:100%;
-			  background-color:$aqua;
-			}
+			// .ease {
+			// 	width: 0px;
+			// 	height: 72px;
+			// 	// background-color: $aqua;
+			// 	// background-color: rgb(230,230,230);
+			// 	background-color: rgb(60,60,60);
+			//
+			// 	transition: .3s ease;
+			// 	border: none;
+			// }
+			//
+			// .button-holder:hover .ease{
+			//   width:100%;
+			// //   background-color:$aqua;
+			// border: solid $aqua 1px;
+			// //   background-color:$cream;
+			//
+			// }
 
 			/* Icons ---------------------------------- */
 			#nameField{

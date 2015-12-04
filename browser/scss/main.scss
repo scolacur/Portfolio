@@ -20,6 +20,7 @@ $pastelOrange: lightsalmon;
 $pastelPurple: #C688E8;
 $pastelRed: #FF807D;
 $pastelPink: #FF8EB2;
+$darkGray: rgb(45,45,45);
 
 /*Fonts
 ========================*/
@@ -47,7 +48,9 @@ body {
 }
 
 body {
-	background-color: rgb(45,45,45);
+	background-color: $darkGray;
+	background: linear-gradient($pastelBlue 20%,  $pastelRed 40%, $darkGray);
+	background: linear-gradient(rgb(60,60,60), $darkGray)
 	// background-image: url('bgnoise.jpg');
 	// background-size: contain;
 	// background-image: url('vaporwave-landscape.jpg');
@@ -65,16 +68,15 @@ footer {
 	bottom:0;
 	left:0;
 	padding-top: 10px;
-	// color: white;
 	color: rgb(230,230,230);
-	color: $aqua;
+
 
 	a {
-		color: $aqua;
+		color: rgb(230,230,230);
 		text-decoration: none;
 		transition: all 0.25s ease-in-out;
 		&:hover {
-			color: rgb(230,230,230);
+			color: $aqua;
 		}
 	}
 }
@@ -99,19 +101,20 @@ footer {
 	padding-right: 20px;
 	// background: linear-gradient(10deg, $aqua 50%, $pastelBlue 150%);
 	#main-logo {
-		font-size: 36px;
+		font-size: 30px;
 		float: left;
-		min-height: $header-height;
+		color: rgb(230,230,230);
+		// min-height: $header-height;
 		text-align:center;
-		background-color: darken(dimgray, 30%);
-		color: transparent;
-		text-shadow: 0px 3px 2px rgba(255,255,255,0.5);
-		-webkit-background-clip: text;
-		-moz-background-clip: text;
-		background-clip: text;
+		// background-color: darken(dimgray, 30%);
+		// color: transparent;
+		// text-shadow: 0px 3px 2px rgba(255,255,255,0.5);
+		// -webkit-background-clip: text;
+		// -moz-background-clip: text;
+		// background-clip: text;
 		font-family: 'Lobster', cursive;
 		&:hover {
-			color: $cream;
+			color: $aqua;
 		}
 	}
 
@@ -144,19 +147,20 @@ footer {
 			z-index: 3;
 			display: inline-block;
 			height: 65px;
-			color: lightgray;
+			color: rgb(230,230,230);
 			text-decoration: none;
 			font-size: 16px;
 			margin-left: -4px;
 			padding-top: 20px;
 			padding-bottom: 20px;
-			border: solid transparent 1px;
-			border-radius: 50px;
+			// border: solid transparent 1px;
+			// border-radius: 50px;
 			&:hover {
 				// background-color: dimgray;
 				color: $aqua;
 				// background-color: $aqua;
-				border: solid 1px $aqua;
+				// border: solid 1px $aqua;
+				text-decoration: line-through;
 			}
 		}
 	}
