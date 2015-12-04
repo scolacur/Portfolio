@@ -328,6 +328,7 @@ $scrollTime: 1s;
 		}
 		a {
 			color: $darkGray;
+			// border: solid black 1px;
 		}
 
 		h1 {
@@ -384,6 +385,13 @@ $scrollTime: 1s;
 
 		#bottom-divider {
 			margin: 40px 50px 40px 50px;
+		}
+
+		#mobile-page-3 #pic-idc {
+			min-height: 262px;
+		}
+		#pic-co, #pic-sp {
+			min-height: 216px;
 		}
 	}
 }

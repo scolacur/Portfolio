@@ -2,6 +2,7 @@ app.controller('projectCtrl', function($scope){
 	var theWindow = $(window);
 	var skewMode = false;
 	var curPage;
+
 	function initializeSkew(){
 		skewMode = true;
 		$(document).ready(function() {
