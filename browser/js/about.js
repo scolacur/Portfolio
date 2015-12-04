@@ -14,7 +14,7 @@ app.controller('aboutCtrl', function($scope){
 		{name: "Git", level: 3},
 		{name: "CSS3", level: 3},
 		{name: "HTML5", level: 3},
-		{name: "Resonsive Design", level: 2},
+		{name: "Responsive Design", level: 2},
 		{name: "Gulp", level: 2},
 		{name: "Mocha & Chai", level: 2},
 		{name: "jQuery", level: 2},
