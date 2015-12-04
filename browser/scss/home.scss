@@ -18,33 +18,32 @@ $pastelPink: #FF8EB2;
 /*Page Styles
 ========================*/
 
+@font-face {
+	font-family: bebas;
+	src: url('bebas/BebasNeue Book.otf');
+}
+
 #home {
-	background-image: url('bgnoise.jpg');
-	// background-image: url('blue-pink-gradient');
-	// background-size: cover;
-	// background: linear-gradient(135deg, $pastelPink -40%, $cyan 50%);
+	background-image: url('vaporwave-landscape.jpg');
+	background-position: bottom;
+	height: 100vh;
 
-	height: calc(100vh - $footer-height);
-	// height: calc(100vh - 40px);
-
-	// background-image: url('vice-city.gif');
-	// background-repeat: no-repeat;
-	// background-size: cover;
-	// background-position: bottom;
 	#header {
 		width: 100%;
-		height: 33vh;
-		padding: 4% 7% 0% 7%;
+		height: 50vh;
+		padding: 15% 7% 0% 7%;
 		margin: auto;
 		margin-bottom: 5%;
 		h1 {
+			// font-family: bebas;
 			text-align: left;
-			font-size: 48px;
+			font-size: 3vw;
+			// font-weight: 700;
 			margin-left: 0px;
 			// font-weight: 400;
 			// margin-bottom: 40px;
 		}
-		.left-col {
+		.main-heading {
 			min-width: 40%;
 			float: left;
 		}
@@ -211,7 +210,7 @@ $pastelPink: #FF8EB2;
 	#home #header {
 		margin-bottom: 80px;
 
-		.left-col, #graphic {
+		.main-heading, #graphic {
 			text-align: center;
 			float: none !important;
 			display: block !important;
@@ -238,7 +237,7 @@ $pastelPink: #FF8EB2;
 			min-height: 400px;
 			padding: 0px;
 
-			.left-col {
+			.main-heading {
 				font-size: 30px;
 				margin: 20px 20px;
 				// animation: none;
@@ -246,7 +245,7 @@ $pastelPink: #FF8EB2;
 			#static-bars {
 				padding: 0px;
 				list-style-type: none;
-				display: block;
+				display: none;
 				li {
 					height: 60px;
 					text-align: left;

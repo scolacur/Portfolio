@@ -40,15 +40,10 @@ body {
 	padding:0;
 	// height:100vh; //this screwed with the about page resizing, oddly
 	margin: 0;
-	overflow: hidden;
 }
 
 body {
-	background-image: url('bgnoise.jpg');
-	background-size: contain;
-	// background-image: url('vaporwave-landscape.jpg');
-	// background-image: url('vaporwave-2.png');
-	// background: linear-gradient(rgb(50,50,50), dimgray);
+
 }
 
 footer {
@@ -57,9 +52,9 @@ footer {
 	width:100%;
 	background: linear-gradient(240deg, $aqua 40%, $pastelBlue 150%);
 	height:$footer-height;
-	position:fixed;
-	bottom:0;
-	left:0;
+	// position:fixed;
+	// bottom:0;
+	// left:0;
 	padding-top: 10px;
 
 	a {
@@ -69,7 +64,7 @@ footer {
 
 #wrapper {
 	margin: auto;
-	min-height:100vh;
+	// min-height:100vh;
 }
 
 // #main{

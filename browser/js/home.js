@@ -2,27 +2,53 @@ app.config(function($stateProvider){
 	$stateProvider
 	.state('home', {
 		url: '/',
-		templateUrl: '/js/templates/home.html',
+		templateUrl: '/js/templates/new-home.html',
 		controller: 'homeCtrl'
-	})
-	.state('projects', {
-		url: '/projects',
-		templateUrl: '/js/templates/projects.html',
-		controller: 'projectCtrl'
-	})
-	.state('about', {
-		url: '/about',
-		templateUrl: '/js/templates/about.html',
-		controller: 'aboutCtrl'
-	})
-	.state('contact', {
-		url: '/contact',
-		templateUrl: '/js/templates/contact.html',
-		controller: 'contactCtrl'
 	});
+	// .state('projects', {
+	// 	url: '/projects',
+	// 	templateUrl: '/js/templates/projects.html',
+	// 	controller: 'projectCtrl'
+	// })
+	// .state('about', {
+	// 	url: '/about',
+	// 	templateUrl: '/js/templates/about.html',
+	// 	controller: 'aboutCtrl'
+	// })
+	// .state('contact', {
+	// 	url: '/contact',
+	// 	templateUrl: '/js/templates/contact.html',
+	// 	controller: 'contactCtrl'
+	// });
+});
+
+app.directive('home', function(){
+	return {
+		restrict: "E",
+		templateUrl: '/js/templates/home.html'
+	};
+});
+app.directive('projects', function(){
+	return {
+		restrict: "E",
+		templateUrl: '/js/templates/projects.html'
+	};
+});
+app.directive('about', function(){
+	return {
+		restrict: "E",
+		templateUrl: '/js/templates/about.html'
+	};
+});
+app.directive('contact', function(){
+	return {
+		restrict: "E",
+		templateUrl: '/js/templates/contact.html'
+	};
 });
 
 app.controller('homeCtrl', function(){
+	$(window).load(function(){
 		var increment = 0;
 		var carousel = $('#carousel');
 		var current = '#fig-1';
@@ -30,12 +56,14 @@ app.controller('homeCtrl', function(){
 		var theWindow = $(window);
 		var interval;
 		var bars = $('#static-bars > li');
-		var header = $('.left-col');
+		var barContainer = $('#static-bars');
+		var header = $('.main-heading');
 
 		if (theWindow.width() > 768) {
 			interval = setInterval(rotate,1500);
 		} else {
 			var speed;
+			barContainer.css({'display': 'block'});
 			bars.each(function(index){
 				speed = (index + 1) * 0.3;
 				$(this).css({'animation':'slideInLeft ' + speed + 's'});
@@ -43,19 +71,21 @@ app.controller('homeCtrl', function(){
 			header.removeClass("animated").removeClass('flipInX');
 		}
 
-		theWindow.resize(function() {
-			clearInterval(interval);
-			if (theWindow.width() > 768) {
-				$('html,body').scrollTop(0);
-				interval = setInterval(rotate,1500);
-			}
-		});
+		// theWindow.resize(function() {
+		// 	clearInterval(interval);
+		// 	if (theWindow.width() > 768) {
+		// 		$('html,body').scrollTop(0);
+		// 		interval = setInterval(rotate,1500);
+		// 	}
+		// });
 
 		function rotate(){
+			console.log('rotating', carousel);
 			increment++;
 			carousel.css({'-webkit-transform': 'rotateX(' + (increment * -60) + 'deg)'});
 			carousel.attr('data-state',(increment % 6) + 1);
 			prev = current;
 			current = '#fig-' + ((increment % 6) + 1);
 		}
+	});
 });
