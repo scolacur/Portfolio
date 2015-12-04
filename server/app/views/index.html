@@ -23,7 +23,7 @@
 	<body ng-app="portfolio" ng-controller="homeCtrl">
 		<div id="wrapper">
 			<header id="main-header" class="group">
-				<a ng-show="!$state.includes('home');" ui-sref="home" id="main-logo">Steve Colacurcio</a>
+				<a ng-show="!$state.includes('home')" ui-sref="home" id="main-logo">Steve Colacurcio</a>
 				<!-- <div id="perspective-container">
 					<div id="perspective"></div>
 				</div> -->
@@ -34,14 +34,14 @@
 				</div>
 			</header>
 			<div id="main" class="animated" ui-view></div>
-			<!-- <footer class="footer">
+			<footer class="footer" ng-show="$state.includes('home') || $state.includes('contact')">
 				<i class="fa fa-copyright"></i>
 				2015 |
 				<a target="_blank" href="http://www.github.com/scolacur/portfolio">
 					View source code for this site on
 					<i class="fa fa-github"></i>
 				</a>
-			</footer> -->
+			</footer>
 		</div>
 	</body>
 </html>
