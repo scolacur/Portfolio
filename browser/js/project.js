@@ -77,10 +77,6 @@ app.controller('projectCtrl', function($scope){
 	if (theWindow.width() > 768) {
 		console.log('INITIALIZING SKEW');
 		initializeSkew();
-	} else {
-		if(window.location.hash.length > 0) {
-			window.scrollTo(0, $(window.location.hash).offset().top);
-		}
 	}
 
 	theWindow.resize(function() {
