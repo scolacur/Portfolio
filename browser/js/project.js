@@ -1,5 +1,7 @@
 app.controller('projectCtrl', function($scope){
 	var theWindow = $(window);
+
+
 	var skewMode = false;
 	var curPage;
 	function initializeSkew(){
@@ -12,7 +14,7 @@ app.controller('projectCtrl', function($scope){
 			var pgPrefix = ".skw-page-";
 			// var progPrefix = "#p";
 
-			curPage = parseInt(window.location.href.split("#p")[1]) + 1 || 1;
+			curPage = parseInt(window.location.hash.split("#p")[1]) + 1 || 1;
 
 			for (var i = 1; i <= numOfPages; i++){
 				if (i < curPage) {
@@ -75,6 +77,10 @@ app.controller('projectCtrl', function($scope){
 	if (theWindow.width() > 768) {
 		console.log('INITIALIZING SKEW');
 		initializeSkew();
+	} else {
+		if(window.location.hash.length > 0) {
+			window.scrollTo(0, $(window.location.hash).offset().top);
+		}
 	}
 
 	theWindow.resize(function() {
