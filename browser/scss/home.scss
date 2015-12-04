@@ -46,7 +46,7 @@ $darkGray: rgb(45,45,45);
 		padding: 4% 7% 0% 7%;
 		margin: auto;
 		margin-bottom: 5%;
-		h1 {
+		h1, h1 > a {
 			color: rgb(230,230,230);
 			font-family: 'Lobster';
 			// font-family: 'Lato'
@@ -195,7 +195,7 @@ $darkGray: rgb(45,45,45);
 			flex-direction: row;
 			justify-content: space-between;
 			padding: 5px;
-			
+
 			#project-1 {
 				background: url('cohearence.png');
 				background-size: cover;
