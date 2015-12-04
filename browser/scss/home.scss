@@ -56,17 +56,16 @@ $darkGray: rgb(45,45,45);
 			// font-weight: 400;
 			// margin-bottom: 40px;
 		}
+
 		/*Fancy Underline*/
-		h1 {
+		.cool-underline {
 			overflow: hidden;
 			position: relative;
 			vertical-align: bottom;
-
 			&:after {
 				background: none center 1.20em / 100% 3px no-repeat;
 				// background: linear-gradient(90deg, $pastelPurple 15%, $pastelRed 35%, $aqua 85%) center 1.20em / 100% 3px no-repeat;
 				animation: underline-gradient 6s linear infinite;
-
 				content: "";
 				height: 100%;
 				left: 0;
@@ -76,13 +75,11 @@ $darkGray: rgb(45,45,45);
 				will-change: transform;
 				z-index: -1;
 			}
-			//
 			&:hover:after {
 				animation: underline-gradient 6s linear infinite;
 				background-image: linear-gradient(
-				90deg, $pastelPurple 15%, $pastelRed 35%, $aqua 55%, $pastelPurple 85%
-				);
-				}
+				90deg, $pastelPurple 15%, $pastelRed 35%, $aqua 55%, $pastelPurple 85%);
+			}
 		}
 
 		@keyframes underline-gradient {
@@ -269,18 +266,35 @@ $darkGray: rgb(45,45,45);
 			width: 300px;
 		}
 	}
+	#home #header .cool-underline {
+		background: none;
+		&:hover:after {
+			background-image: none;
+		}
+	}
 }
 
 @media (max-width: 954px){
 	figure {
 		font-size: 1.8em !important;
 	}
+	#home #header .cool-underline {
+		background: none;
+		&:hover:after {
+			background-image: none;
+		}
+	}
 }
 
 @media (max-width: 768px){
-
 	#home {
 		#header {
+	.cool-underline {
+		background: none;
+		&:hover:after {
+			background-image: none;
+		}
+	}
 			min-height: 460px;
 			padding: 0px;
 
