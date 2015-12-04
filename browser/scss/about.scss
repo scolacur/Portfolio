@@ -21,8 +21,7 @@ $darkGray: rgb(45,45,45);
 ========================*/
 
 #about {
-	height: calc(100vh - $footer-height);
-
+	height: 100vh;
 	background-image: url("steve-pic-2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -71,7 +70,7 @@ $darkGray: rgb(45,45,45);
 		svg {
 			padding-top: 65%;
 			width: 100%;
-			height: 87vh;
+			height: 100vh;
 		}
 		&:hover {
 			h1 {
@@ -158,6 +157,9 @@ $darkGray: rgb(45,45,45);
 				background-color: rgba(255,255,255,.5);
 				padding: 5%;
 				margin-bottom: 0px;
+				h1 {
+					text-align: left;
+				}
 			}
 		}
 	}
