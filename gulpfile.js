@@ -4,13 +4,13 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	eslint = require('gulp-eslint'),
 	livereload = require('gulp-livereload'),
-	notify = require('gulp-notify');
+	notify = require('gulp-notify'),
 	plumber = require('gulp-plumber'),
 	rename = require('gulp-rename'),
 	runSeq = require('run-sequence'),
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
-	uglify = require('gulp-uglify'),
+	// uglify = require('gulp-uglify'),
 	minifyJS = require('gulp-minify'),
 	minifyCSS = require('gulp-minify-css'),
 	ngAnnotate = require('gulp-ng-annotate');
@@ -80,7 +80,7 @@ gulp.task('buildJSProduction', function () {
         .pipe(babel())
         .pipe(ngAnnotate())
         // .pipe(uglify())
-		.pipe(minify())
+		.pipe(minifyJS())
         .pipe(gulp.dest('./public'));
 });
 
