@@ -11,6 +11,7 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
 	uglify = require('gulp-uglify'),
+	minifyJS = require('gulp-minify'),
 	minifyCSS = require('gulp-minify-css'),
 	ngAnnotate = require('gulp-ng-annotate');
 
@@ -78,7 +79,8 @@ gulp.task('buildJSProduction', function () {
         .pipe(concat('main.js'))
         .pipe(babel())
         .pipe(ngAnnotate())
-        .pipe(uglify())
+        // .pipe(uglify())
+		.pipe(minify())
         .pipe(gulp.dest('./public'));
 });
 
