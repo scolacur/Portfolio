@@ -54,9 +54,9 @@ app.controller('homeCtrl', function($scope, $state){
 
 		function rotate(){
 			increment++;
-			carousel.css({'-webkit-transform': 'rotateX(' + (increment * -60) + 'deg)'});
-			carousel.attr('data-state',(increment % 6) + 1);
+			carousel.css({'-webkit-transform': 'rotateX(' + (increment * -120) + 'deg)'});
+			carousel.attr('data-state',(increment % 3) + 1);
 			prev = current;
-			current = '#fig-' + ((increment % 6) + 1);
+			current = '#fig-' + ((increment % 3) + 1);
 		}
 });
