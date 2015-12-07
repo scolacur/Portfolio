@@ -205,18 +205,14 @@ $scrollTime: 1s;
 			background-position: 80px -60px;
 		}
 		.skw-page__half--right .skw-page__content {
-			// background-image: url(bgnoise.jpg);
-			// background-color: rgb(65,65,65);
-			background-color: $softGray;
+			background: linear-gradient($softGray 10%, $darkGray)
 
 		}
 	}
 
 	&-2 {
 		.skw-page__half--left .skw-page__content {
-			// background-image: url(bgnoise.jpg);
-			// background-color: rgb(45,45,45);
-			background-color: $softGray;
+			background: linear-gradient($softGray 10%, $darkGray)
 
 		}
 		.skw-page__half--right .skw-page__content {
@@ -229,18 +225,14 @@ $scrollTime: 1s;
 			background-image: url('spheres.png');
 		}
 		.skw-page__half--right .skw-page__content {
-			// background-image: url(bgnoise.jpg);
-			// background-color: rgb(45,45,45);
-			background-color: $softGray;
+			background: linear-gradient($softGray 10%, $darkGray)
 
 		}
 	}
 
 	&-4 {
 		.skw-page__half--left .skw-page__content {
-			// background-image: url(bgnoise.jpg);
-			// background-color: rgb(45,45,45);
-			background-color: $softGray;
+			background: linear-gradient($softGray 10%, $darkGray)
 
 		}
 		.skw-page__half--right .skw-page__content {
@@ -253,10 +245,7 @@ $scrollTime: 1s;
 			background-image: url('collage.png');
 		}
 		.skw-page__half--right .skw-page__content {
-			// background-image: url(bgnoise.jpg);
-			// background-color: rgb(45,45,45);
-			background-color: $softGray;
-
+			background: linear-gradient($softGray 10%, $darkGray)
 		}
 	}
 
