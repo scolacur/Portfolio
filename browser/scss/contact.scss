@@ -20,14 +20,14 @@ $softWhite: rgb(230,230,230);
 
 #contact {
 	// background-image: url('bgnoise.jpg');
-	background-size: cover;
+	// background-size: cover;
 	height: calc(100vh - $footer-height);
 
 	// background-image: url('vaporwave-landscape.jpg');
-	// background-image: url("steve-pic-2.jpg");
-	// background-repeat: no-repeat;
 	// background-size: 100%;
 	// background-position: 30%;
+	// background-image: url("steve-pic-2.jpg");
+	// background-repeat: no-repeat;
 
 	#resume-container {
 		display: none;
@@ -173,15 +173,16 @@ $softWhite: rgb(230,230,230);
 		}
 
 		#form-container {
-			// background-image: url('bgnoise.jpg');
-			// background: rgb(240,240,240);
-			// background: $aqua;
-
-			// background-color: $cream;
+			background: linear-gradient(46.5deg, $softWhite 50%, $softGray 45%);
+			// background-image: url('vaporwave-landscape.jpg');
+			// background-size: cover;
+			// background-position: 30%;
+			// background-repeat: no-repeat;
 			text-align: center;
 			margin: auto;
-			border-radius: 10px;
+			// border-radius: 10px;
 			padding: 20px;
+			// border: solid $aqua 1px;
 			box-shadow: 0px 2px 10px black;
 
 			h2 {
@@ -249,7 +250,8 @@ $softWhite: rgb(230,230,230);
 				transition: all 0.3s ease-in-out;
 
 				p {
-					color: rgb(230,230,230);
+					// color: rgb(230,230,230);
+					color: $softGray;
 					margin-top: 22px;
 					margin-bottom: 22px;
 					padding: 0;
@@ -266,13 +268,13 @@ $softWhite: rgb(230,230,230);
 					}
 				}
 
+					// border: solid $aqua 1px;
 				&:hover{
 					background-color: rgb(30,30,30);
 
 					// color: #fbfbfb;
-					border: solid $aqua 1px;
 					p {
-						color: $aqua;
+						color: $softWhite;
 					}
 				}
 

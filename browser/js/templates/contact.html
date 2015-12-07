@@ -8,7 +8,7 @@
 		</div>
 	</div>
 	<div id="overlay"></div>
-	<div id="main-content">
+	<div id="main-content"  class="animated fadeIn">
 			<!-- <div class="social animated slideInLeft"> -->
 			<div class="social">
 			<a href="mailto:stephencolacurcio@gmail.com">
@@ -26,7 +26,7 @@
 				<i id="github" class="fa fa-github"></i>
 			</a>
 		</div>
-		<div id="form-container" class="animated slideInUp" >
+		<div id="form-container">
 			<h2>Let's chat.</h2>
 			<form name="contactForm" ng-submit="contactForm.$valid && sendMail(formData)" ng-hide="sent">
 				<input id="nameField" name="nameField" type="text" ng-model="formData.name" placeholder="Name" required/>
