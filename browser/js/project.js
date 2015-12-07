@@ -74,7 +74,6 @@ app.controller('projectCtrl', function($scope){
 	}
 
 	if (theWindow.width() > 768) {
-		console.log('INITIALIZING SKEW');
 		initializeSkew();
 	}
 
