@@ -21,6 +21,8 @@ $pastelPurple: #C688E8;
 $pastelRed: #FF807D;
 $pastelPink: #FF8EB2;
 $darkGray: rgb(45,45,45);
+$softGray: rgb(60,60,60);
+$softWhite: rgb(230,230,230);
 
 /*Fonts
 ========================*/
@@ -49,7 +51,7 @@ body {
 body {
 	background-color: $darkGray;
 	background: linear-gradient($pastelBlue 20%,  $pastelRed 40%, $darkGray);
-	background: linear-gradient(rgb(60,60,60), $darkGray)
+	background: linear-gradient($softGray 10%, $darkGray)
 	// background-image: url('bgnoise.jpg');
 	// background-size: contain;
 	// background-image: url('vaporwave-landscape.jpg');
@@ -101,7 +103,7 @@ footer {
 	#main-logo {
 		font-size: 30px;
 		float: left;
-		color: rgb(230,230,230);
+		color: $aqua;
 		// min-height: $header-height;
 		text-align:center;
 		// background-color: darken(dimgray, 30%);
@@ -112,7 +114,7 @@ footer {
 		// background-clip: text;
 		font-family: 'Lobster', cursive;
 		&:hover {
-			color: $aqua;
+			color: $softWhite;
 		}
 	}
 

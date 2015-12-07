@@ -56,7 +56,12 @@ $darkGray: rgb(45,45,45);
 			// font-weight: 400;
 			// margin-bottom: 40px;
 		}
-
+		h1 > a {
+			transition: all .3s ease-in-out;
+			&:hover {
+				color: $aqua;
+			}
+		}
 
 
 		/*Fancy Underline*/
