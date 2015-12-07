@@ -38,7 +38,10 @@ $darkGray: rgb(45,45,45);
 		// overflow-y: scroll;
 		padding-bottom: 100px;
 
-		h1, p, a, li {
+		h1 {
+			color: black;
+		}
+		p, a, li {
 			color: black;
 			text-align: justify;
 		}
@@ -112,9 +115,9 @@ $darkGray: rgb(45,45,45);
 		-webkit-overflow-scrolling: touch;
 	}
 	#about {
-		height: 55vh;
+		// height: 68vh;
+		height: calc(100vh - 20vw);
 		background-position: bottom;
-
 		#skills-cloud {
 			display: none;
 		}
@@ -166,7 +169,8 @@ $darkGray: rgb(45,45,45);
 		#about-me {
 			height: 100%;
 			background-image: url('steve-pic-2.jpg');
-			background-position: bottom;
+			background-position: 75% 0px;
+			background-repeat: no-repeat;
 			background-size: cover;
 			opacity: .8;
 			padding: 0px;
