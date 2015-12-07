@@ -35,16 +35,33 @@ $darkGray: rgb(45,45,45);
 		letter-spacing: .01em;
 		background-color: white;
 		opacity: .5;
+		// overflow-y: scroll;
+		padding-bottom: 100px;
 
-		h1, p, a {
+		h1, p, a, li {
 			color: black;
 			text-align: justify;
+		}
+
+		#ethos{
+			text-decoration: underline;
+			// font-weight: bold;
+		}
+
+		ul {
+			padding: 0px;
+			padding-bottom: 10px;
+			list-style-type: none;
+			li{
+				// padding-top: 5px;
+				padding-bottom: 8px;
+			}
 		}
 		h1 {
 			margin-bottom: 30px;
 		}
 		p {
-			font-size: 20px;
+			font-size: 18px;
 			line-height: 150%;
 			display: block;
 			margin-top: 0px;
