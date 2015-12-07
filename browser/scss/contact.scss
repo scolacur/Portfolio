@@ -11,6 +11,8 @@ $aqua: #7FFFD4;
 $cyan: #E0FFFF;
 $cream: #F5FFFA;
 $darkGray: rgb(45,45,45);
+$softGray: rgb(60,60,60);
+$softWhite: rgb(230,230,230);
 
 
 /*Page Styles
@@ -43,23 +45,22 @@ $darkGray: rgb(45,45,45);
 			img {
 				margin-bottom: 1%;
 				opacity: 1;
-				width: 100%;
-				// width: 50vw;
+				width: 95%;
 				// height: 80vh;
 			}
 
 			#download-button {
 				position: absolute;
-				margin-top: 600px;
+				margin-top: 650px;
 				top: 0;
 				left: 0;
 				width: 40%;
 				margin-left: 30%;
 
-				background-color: $aqua;
+				background-color: $softGray;
 				font-size: 14px;
-				color: dimgray;
-				border: solid dimgray 2px;
+				color: $softWhite;
+				border: solid $softWhite 2px;
 				border-radius: 10px;
 				padding: 10px 7px;
 				transition: all 0.25s ease-in-out;
@@ -67,7 +68,9 @@ $darkGray: rgb(45,45,45);
 					margin: 5px;
 				}
 				&:hover {
-					color: $cream;
+					background-color: $softWhite;
+					color: $softGray;
+					border: solid $softGray 2px;
 				}
 			}
 		}
