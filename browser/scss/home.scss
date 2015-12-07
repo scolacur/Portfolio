@@ -106,9 +106,9 @@ $darkGray: rgb(45,45,45);
 		transform: skewX(-10deg);
 	}
 
-	#carousel figure:nth-of-type(1) { transform: rotateX(0deg) translateZ(60px); }
-	#carousel figure:nth-of-type(2) { transform: rotateX(120deg) translateZ(60px); }
-	#carousel figure:nth-of-type(3) { transform: rotateX(240deg) translateZ(60px); }
+	#carousel figure:nth-of-type(1) { transform: rotateX(0deg) translateZ(30px); }
+	#carousel figure:nth-of-type(2) { transform: rotateX(120deg) translateZ(30px); }
+	#carousel figure:nth-of-type(3) { transform: rotateX(240deg) translateZ(30px); }
 	// #carousel figure:nth-of-type(4) { transform: rotateX(180deg) translateZ(60px); }
 	// #carousel figure:nth-of-type(5) { transform: rotateX(240deg) translateZ(60px); }
 	// #carousel figure:nth-of-type(6) { transform: rotateX(300deg) translateZ(60px); }
