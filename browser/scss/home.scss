@@ -28,18 +28,8 @@ $darkGray: rgb(45,45,45);
 ========================*/
 
 #home {
-	// background-image: url('bgnoise.jpg');
-	// background-image: url('blue-pink-gradient');
-	// background-size: cover;
-	// background: linear-gradient(135deg, $pastelPink -40%, $cyan 50%);
-
 	height: calc(100vh - $footer-height);
-	// height: calc(100vh - 40px);
 
-	// background-image: url('vice-city.gif');
-	// background-repeat: no-repeat;
-	// background-size: cover;
-	// background-position: bottom;
 	#header {
 		width: 100%;
 		height: 33vh;
@@ -49,12 +39,9 @@ $darkGray: rgb(45,45,45);
 		h1, h1 > a {
 			color: rgb(230,230,230);
 			font-family: 'Lobster';
-			// font-family: 'Lato'
 			text-align: left;
 			font-size: 4vw;
 			margin-left: 0px;
-			// font-weight: 400;
-			// margin-bottom: 40px;
 		}
 		h1 > a {
 			transition: all .3s ease-in-out;
@@ -116,6 +103,7 @@ $darkGray: rgb(45,45,45);
 	#carousel-wrapper, #carousel figure {
 		height: 70px;
 		line-height: 70px;
+		transform: skewX(-10deg);
 	}
 
 	#carousel figure:nth-of-type(1) { transform: rotateX(0deg) translateZ(60px); }
