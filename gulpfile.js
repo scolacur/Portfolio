@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 	// uglify = require('gulp-uglify'),
 	minifyJS = require('gulp-minify'),
 	minifyCSS = require('gulp-minify-css'),
+	imagemin = require('gulp-imagemin'),
 	ngAnnotate = require('gulp-ng-annotate');
 
 
@@ -82,6 +83,12 @@ gulp.task('buildJSProduction', function () {
         // .pipe(uglify())
 		.pipe(minifyJS())
         .pipe(gulp.dest('./public'));
+});
+
+gulp.task('minifyImages', function(){
+	return gulp.src('./public/*')
+		.pipe(imagemin())
+		.pipe(gulp.dest('./public'));
 });
 
 //////////////////////////////////////////////////
