@@ -194,6 +194,16 @@ $scrollTime: 1s;
 		}
 	}
 
+
+
+	.project-stats {
+		i {
+			color: $softWhite;
+			margin-left: 5px;
+			font-size: 24px;
+		}
+	}
+
 	&__link {
 		// color: #FFA0A0;
 	}
@@ -287,8 +297,8 @@ $scrollTime: 1s;
 
 @media (max-width: 768px) {
 	body {
-		// overflow-y: scroll;
-		// -webkit-overflow-scrolling: touch;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	// .skw-page {
@@ -367,6 +377,10 @@ $scrollTime: 1s;
 		hr {
 			margin: 40px 50px 40px 50px;
 			border-width: 1px;
+		}
+
+		.project-stats {
+			padding: 10px 0px 0px 50px;
 		}
 
 		#p1 {
