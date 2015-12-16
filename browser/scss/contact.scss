@@ -334,7 +334,14 @@ $softWhite: rgb(230,230,230);
 			// box-shadow: 0px 2px 10px black;
 			animation: fadein 1s;
 
+			p {
+				box-shadow: 0px 2px 10px black;
+				padding: 10px;
+				border-radius: 10px;
+				background-color: $softWhite;
+			}
 			a, p {
+				color: $softGray;
 				font-size: 16px;
 			}
 			a {
@@ -342,6 +349,7 @@ $softWhite: rgb(230,230,230);
 			}
 
 			button {
+				color: $softGray;
 				border: solid dimgray 2px;
 				margin-top: 100px;
 				background-color: transparent;
