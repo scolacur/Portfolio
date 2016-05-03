@@ -8,9 +8,9 @@ module.exports = router;
 
 router.post('/', function(req,res,next){
 	var message = {
-		"html": data.message,
-		"subject": data.name + " saw your portfolio and sent you a message!",
-		"from": data.email,
+		"html": req.body.message,
+		"subject": req.body.name + " saw your portfolio and sent you a message!",
+		"from": req.body.email,
 		"to": "stephencolacurcio@gmail.com"
 	};
 
