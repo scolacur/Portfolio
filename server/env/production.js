@@ -7,5 +7,6 @@
 
 module.exports = {
 	"SESSION_SECRET": process.env.SESSION_SECRET,
-	"MANDRILL": process.env.MANDRILL_API_KEY
+	// "MANDRILL": process.env.MANDRILL_API_KEY
+	"MAILGUN": process.env.MAILGUN_API_KEY
 };
