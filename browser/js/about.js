@@ -5,27 +5,47 @@ app.controller('aboutCtrl', function($scope){
 
 	// angular.element(document).ready(function(){
 	$scope.skills = [
+
+		//Basic stuff
 		{name: "JavaScript", level: 3},
-		{name: "MongoDB", level: 3},
+		{name: "CSS", level: 3},
+		{name: "HTML", level: 3},
+		{name: "Node.js", level: 3},
 		{name: "Express.js", level: 3},
 		{name: "Angular.js", level: 3},
-		{name: "Node.js", level: 3},
-		{name: "Mongoose.js", level: 3},
-		{name: "Git", level: 3},
-		{name: "CSS3", level: 3},
-		{name: "HTML5", level: 3},
-		{name: "Responsive Design", level: 2},
-		// {name: "Gulp", level: 2},
-		{name: "Mocha & Chai", level: 2},
-		{name: "jQuery", level: 2},
-		// {name: "Bootstrap", level: 2},
-		{name: "Web-Audio", level: 2},
+		{name: "MongoDB", level: 3},
+
+		//Build tools
+		{name: "Webpack", level: 3},
+		{name: "Gulp", level: 3},
+		{name: "Grunt", level: 3},
+
+		{name: "Responsive Design", level: 3},
+		{name: "Agile Methodologies", level: 3},
+
+		//Testing
+		{name: "Mocha / Chai", level: 3},
+		{name: "TDD", level: 3},
+		{name: "Karma", level: 3},
+		{name: "Jasmine", level: 3},
+		{name: "Continuous Integration", level: 2},
+
+		{name: "HLS Video", level: 2},
+		{name: "React.js", level: 2},
+		{name: "Redux", level: 2},
+
+		{name: "Web-Audio", level: 1},
 		{name: "Chrome Extensions", level: 1},
 		{name: "SQL", level: 1},
-		// {name: "WebSockets", level: 1},
 		{name: "MIDI", level: 1},
 		{name: "Java", level: 1},
 		{name: "C++", level: 1},
+		{name: "Python", level: 1},
+		{name: "Django", level: 1},
+		{name: "AWS", level: 1},
+		{name: "D3.js", level: 1},
+
+
 	];
 
 	$scope.colors = [
@@ -42,6 +62,7 @@ app.controller('aboutCtrl', function($scope){
 	});
 
 function initializeSkillsCloud(){
+	console.log('skills: ', $scope.skills);
 	var skillsCloud = $("#skills-cloud");
 	var width = skillsCloud.width();
 	var height = skillsCloud.height();
